@@ -23,5 +23,10 @@
     "url": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da",
     "title": "Culture",
     "category": "Culture"
+  },
+  {
+    "url": "assets/images/india.png",
+    "title": "Spirit of India",
+    "category": "Culture"
   }
 ]

@@ -1,27 +1,52 @@
 [
   {
-    "question": "Who gave the slogan 'Give me blood and I will give you freedom'?",
-    "options": ["Mahatma Gandhi", "Bhagat Singh", "Subhas Chandra Bose", "Jawaharlal Nehru"],
-    "answer": 2
-  },
-  {
-    "question": "When did India become independent?",
-    "options": ["15 August 1947", "26 January 1950", "2 October 1869", "15 August 1950"],
-    "answer": 0
-  },
-  {
-    "question": "Who designed the Indian National Flag?",
-    "options": ["Mahatma Gandhi", "Pingali Venkayya", "Dr. B. R. Ambedkar", "Sardar Patel"],
+    "question": "When does India celebrate Independence Day?",
+    "options": ["26 January", "15 August", "2 October", "14 November"],
     "answer": 1
   },
   {
-    "question": "Which movement started in 1942?",
-    "options": ["Non-Cooperation Movement", "Swadeshi Movement", "Quit India Movement", "Civil Disobedience Movement"],
+    "question": "In which year did India gain independence?",
+    "options": ["1945", "1946", "1947", "1950"],
     "answer": 2
   },
   {
-    "question": "Who was the first Prime Minister of Independent India?",
-    "options": ["Dr. Rajendra Prasad", "Jawaharlal Nehru", "Sardar Patel", "Lal Bahadur Shastri"],
+    "question": "Who was the first Prime Minister of India?",
+    "options": ["Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Patel", "Dr. B. R. Ambedkar"],
+    "answer": 1
+  },
+  {
+    "question": "From which monument does the Prime Minister hoist the national flag on Independence Day?",
+    "options": ["India Gate", "Red Fort", "Gateway of India", "Rashtrapati Bhavan"],
+    "answer": 1
+  },
+  {
+    "question": "How many colors are there in the Indian National Flag?",
+    "options": ["Two", "Three", "Four", "Five"],
+    "answer": 1
+  },
+  {
+    "question": "What is the blue wheel in the center of the Indian flag called?",
+    "options": ["Dharma Chakra", "Ashoka Chakra", "Victory Wheel", "Freedom Chakra"],
+    "answer": 1
+  },
+  {
+    "question": "Who is known as the 'Father of the Nation' in India?",
+    "options": ["Subhas Chandra Bose", "Bhagat Singh", "Mahatma Gandhi", "Sardar Patel"],
+    "answer": 2
+  },
+  {
+    "question": "Which movement was launched in 1942?",
+    "options": ["Swadeshi Movement", "Quit India Movement", "Dandi March", "Civil Disobedience Movement"],
+    "answer": 1
+  },
+  {
+    "question": "Who gave the slogan \"Give me blood, and I will give you freedom\"?",
+    "options": ["Bhagat Singh", "Subhas Chandra Bose", "Jawaharlal Nehru", "Mahatma Gandhi"],
+    "answer": 1
+  },
+  {
+    "question": "What is the national anthem of India?",
+    "options": ["Vande Mataram", "Jana Gana Mana", "Sare Jahan Se Achha", "Ae Mere Watan Ke Logon"],
     "answer": 1
   }
 ]

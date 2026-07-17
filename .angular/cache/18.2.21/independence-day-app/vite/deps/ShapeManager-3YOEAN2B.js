@@ -1,0 +1,21 @@
+import "./chunk-WDMUDEB6.js";
+
+// node_modules/@tsparticles/plugin-emitters/browser/ShapeManager.js
+var shapeGenerators = /* @__PURE__ */ new Map();
+var ShapeManager = class {
+  addShapeGenerator(name, generator) {
+    if (!this.getShapeGenerator(name)) {
+      shapeGenerators.set(name, generator);
+    }
+  }
+  getShapeGenerator(name) {
+    return shapeGenerators.get(name);
+  }
+  getSupportedShapeGenerators() {
+    return shapeGenerators.keys();
+  }
+};
+export {
+  ShapeManager
+};
+//# sourceMappingURL=ShapeManager-3YOEAN2B.js.map

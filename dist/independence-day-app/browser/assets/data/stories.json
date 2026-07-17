@@ -1,0 +1,22 @@
+[
+  {
+    "title": "The Dandi March",
+    "image": "assets/images/salt_march.png",
+    "summary": "The Salt March, also known as the Dandi March and the Dandi Satyagraha, was an act of nonviolent civil disobedience in colonial India led by Mahatma Gandhi.",
+    "events": [
+      "12 March 1930: March begins from Sabarmati Ashram.",
+      "6 April 1930: Gandhi breaks the salt laws at Dandi.",
+      "Mass civil disobedience follows across India."
+    ]
+  },
+  {
+    "title": "Quit India Movement",
+    "image": "assets/images/quit_india.png",
+    "summary": "Launched by Mahatma Gandhi at the Bombay session of the All-India Congress Committee demanding an end to British rule in India.",
+    "events": [
+      "8 August 1942: Quit India resolution passed.",
+      "9 August 1942: Mass arrests of Congress leaders.",
+      "Widespread protests and parallel governments formed."
+    ]
+  }
+]

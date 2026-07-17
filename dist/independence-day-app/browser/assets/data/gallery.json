@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://images.unsplash.com/photo-1532375810709-75b1da00537c",
+    "title": "Indian Flag",
+    "category": "Symbols"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1587474260584-136574528ed5",
+    "title": "India Gate",
+    "category": "Monuments"
+  },
+  {
+    "url": "assets/images/red_fort.png",
+    "title": "Red Fort",
+    "category": "Monuments"
+  },
+  {
+    "url": "assets/images/taj_mahal.png",
+    "title": "Taj Mahal",
+    "category": "Heritage"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da",
+    "title": "Culture",
+    "category": "Culture"
+  }
+]

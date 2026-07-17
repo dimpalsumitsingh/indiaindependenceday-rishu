@@ -4,6 +4,17 @@
     <p class="subtitle">How well do you know India's history?</p>
   </div>
 
+  <div class="poem-section text-center" style="margin-bottom: 2rem;">
+    <h3 class="text-gradient">🇮🇳 Short Poem on India</h3>
+    <p class="poem-text" style="font-size: 1.1rem; line-height: 1.6;">
+      <strong>My India, proud and free,</strong><br>
+      <strong>A land of hope for you and me.</strong><br>
+      <strong>With courage, peace, and unity,</strong><br>
+      <strong>We salute our nation's dignity.</strong><br>
+      <strong>Happy Independence Day! 🇮🇳</strong>
+    </p>
+  </div>
+
   <div class="quiz-container container" *ngIf="questions.length > 0">
     <div class="glass-card quiz-card">
       <div *ngIf="!showScore">
@@ -43,6 +54,13 @@
         <p *ngIf="score === questions.length">Perfect Score! You are a true patriot!</p>
         <p *ngIf="score < questions.length && score > 2">Good job! Keep learning.</p>
         <p *ngIf="score <= 2">Time to brush up on some history!</p>
+
+        <div class="bonus-question mt-4 p-4" style="background: rgba(255, 255, 255, 0.05); border-radius: 10px; text-align: left; margin-top: 2rem; border-left: 4px solid var(--saffron);">
+          <h3 class="text-gradient" style="margin-bottom: 1rem;">🇮🇳 Bonus Question</h3>
+          <p style="margin-bottom: 0.5rem; font-size: 1.1rem;"><strong>What does Independence Day remind us of?</strong></p>
+          <p style="opacity: 0.9;"><strong>Answer:</strong> It reminds us of the sacrifices made by our freedom fighters and inspires us to uphold the values of freedom, unity, peace, and democracy. 🇮🇳</p>
+        </div>
+
         <button class="btn btn-primary mt-4" (click)="restartQuiz()">Try Again</button>
       </div>
     </div>

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Mahatma Gandhi",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Portrait_Gandhi.jpg",
+    "birth": "2 October 1869",
+    "death": "30 January 1948",
+    "contributions": "Led India's independence movement through nonviolent civil disobedience.",
+    "quote": "Be the change that you wish to see in the world."
+  },
+  {
+    "name": "Bhagat Singh",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Bhagat_Singh_1929.jpg",
+    "birth": "28 September 1907",
+    "death": "23 March 1931",
+    "contributions": "A charismatic Indian revolutionary who became a hero of the independence movement.",
+    "quote": "They may kill me, but they cannot kill my ideas."
+  },
+  {
+    "name": "Subhas Chandra Bose",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Subhas_Chandra_Bose_NRB.jpg",
+    "birth": "23 January 1897",
+    "death": "18 August 1945",
+    "contributions": "Indian nationalist whose defiant patriotism made him a hero in India.",
+    "quote": "Give me blood and I will give you freedom!"
+  },
+  {
+    "name": "Sardar Vallabhbhai Patel",
+    "image": "assets/images/sardar_patel.png",
+    "birth": "31 October 1875",
+    "death": "15 December 1950",
+    "contributions": "Played a leading role in the country's struggle for independence and guided its integration into a united, independent nation.",
+    "quote": "Faith is of no evil in absence of strength. Faith and strength, both are essential to accomplish any great work."
+  },
+  {
+    "name": "Rani Lakshmibai",
+    "image": "assets/images/rani_lakshmibai.png",
+    "birth": "19 November 1828",
+    "death": "18 June 1858",
+    "contributions": "One of the leading figures of the Indian Rebellion of 1857 and became a symbol of resistance to the British Raj.",
+    "quote": "I shall not surrender my Jhansi."
+  }
+]

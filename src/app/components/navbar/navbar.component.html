@@ -4,20 +4,34 @@
       <i class="fa-solid fa-dharmachakra fa-spin" style="--fa-animation-duration: 10s;"></i> Independence Day
     </a>
     
-    <div class="menu-toggle" (click)="toggleMenu()">
-      <i class="fa-solid" [ngClass]="isMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+    <div class="nav-controls" style="display: flex; gap: 1rem; align-items: center;">
+      <div class="audio-controls" style="display: flex; align-items: center; gap: 0.5rem;">
+        <button class="icon-btn" (click)="toggleMusic()" aria-label="Play/Pause Music">
+          <i class="fa-solid" [ngClass]="(audioService.isPlaying$ | async) ? 'fa-pause' : 'fa-play'"></i>
+        </button>
+        <button class="icon-btn" (click)="audioService.toggleMute()" aria-label="Mute/Unmute">
+          <i class="fa-solid" [ngClass]="(audioService.isMuted$ | async) ? 'fa-volume-xmark' : 'fa-volume-high'"></i>
+        </button>
+        <input type="range" class="volume-slider" min="0" max="1" step="0.01" 
+               [value]="audioService.volume$ | async" 
+               (input)="onVolumeChange($event)"
+               aria-label="Volume Control" />
+      </div>
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <i class="fa-solid" [ngClass]="isMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+      </div>
     </div>
 
     <ul class="nav-links" [ngClass]="{'open': isMenuOpen}">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Home</a></li>
-      <li><a routerLink="/history" routerLinkActive="active" (click)="toggleMenu()">History</a></li>
-      <li><a routerLink="/timeline" routerLinkActive="active" (click)="toggleMenu()">Timeline</a></li>
-      <li><a routerLink="/freedom-fighters" routerLinkActive="active" (click)="toggleMenu()">Freedom Fighters</a></li>
-      <li><a routerLink="/stories" routerLinkActive="active" (click)="toggleMenu()">Stories</a></li>
-      <li><a routerLink="/gallery" routerLinkActive="active" (click)="toggleMenu()">Gallery</a></li>
-      <li><a routerLink="/events" routerLinkActive="active" (click)="toggleMenu()">Events</a></li>
-      <li><a routerLink="/quiz" routerLinkActive="active" (click)="toggleMenu()">Quiz</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active" (click)="toggleMenu()">Contact</a></li>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">Home</a></li>
+      <li><a routerLink="/history" routerLinkActive="active" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">History</a></li>
+      <li><a routerLink="/timeline" routerLinkActive="active" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">Timeline</a></li>
+      <li><a routerLink="/freedom-fighters" routerLinkActive="active" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">Freedom Fighters</a></li>
+      <li><a routerLink="/stories" routerLinkActive="active" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">Stories</a></li>
+      <li><a routerLink="/gallery" routerLinkActive="active" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">Gallery</a></li>
+      <li><a routerLink="/events" routerLinkActive="active" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">Events</a></li>
+      <li><a routerLink="/quiz" routerLinkActive="active" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">Quiz</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="onNavClick()" (mouseenter)="audioService.playHoverSound()">Contact</a></li>
     </ul>
   </div>
 </nav>

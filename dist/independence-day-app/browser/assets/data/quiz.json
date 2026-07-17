@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Who gave the slogan 'Give me blood and I will give you freedom'?",
+    "options": ["Mahatma Gandhi", "Bhagat Singh", "Subhas Chandra Bose", "Jawaharlal Nehru"],
+    "answer": 2
+  },
+  {
+    "question": "When did India become independent?",
+    "options": ["15 August 1947", "26 January 1950", "2 October 1869", "15 August 1950"],
+    "answer": 0
+  },
+  {
+    "question": "Who designed the Indian National Flag?",
+    "options": ["Mahatma Gandhi", "Pingali Venkayya", "Dr. B. R. Ambedkar", "Sardar Patel"],
+    "answer": 1
+  },
+  {
+    "question": "Which movement started in 1942?",
+    "options": ["Non-Cooperation Movement", "Swadeshi Movement", "Quit India Movement", "Civil Disobedience Movement"],
+    "answer": 2
+  },
+  {
+    "question": "Who was the first Prime Minister of Independent India?",
+    "options": ["Dr. Rajendra Prasad", "Jawaharlal Nehru", "Sardar Patel", "Lal Bahadur Shastri"],
+    "answer": 1
+  }
+]

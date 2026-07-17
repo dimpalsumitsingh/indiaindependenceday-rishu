@@ -7,7 +7,13 @@
         </div>
         <div class="timeline-year">{{ item.year }}</div>
         <h3 class="timeline-title">{{ item.title }}</h3>
-        <p class="timeline-desc" *ngIf="expandedIndex === i">{{ item.description }}</p>
+        
+        <div class="timeline-details" *ngIf="expandedIndex === i">
+          <p class="timeline-desc">{{ item.description }}</p>
+          <div class="timeline-image" *ngIf="item.image" style="margin-top: 1rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <img [src]="item.image" [alt]="item.title" style="width: 100%; height: auto; max-height: 250px; object-fit: cover; border-radius: 8px; display: block;">
+          </div>
+        </div>
       </div>
     </div>
   </div>

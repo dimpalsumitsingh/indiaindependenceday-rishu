@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgxParticlesModule, NgParticlesService } from '@tsparticles/angular';
 import { Engine } from '@tsparticles/engine';
 import { loadFull } from 'tsparticles';
+import { AudioService } from './core/services/audio.service';
 
 @Component({
   selector: 'app-root',
@@ -82,11 +83,48 @@ export class AppComponent implements OnInit {
     detectRetina: true,
   };
 
-  constructor(private readonly ngParticlesService: NgParticlesService) {}
+  private hasInteracted = false;
+
+  constructor(
+    private readonly ngParticlesService: NgParticlesService,
+    private audioService: AudioService
+  ) {}
 
   ngOnInit(): void {
     void this.ngParticlesService.init(async (engine: Engine) => {
       await loadFull(engine);
     });
+  }
+
+  private lastHoveredElement: Element | null = null;
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (!this.hasInteracted) {
+      this.hasInteracted = true;
+      this.audioService.playAudio();
+    }
+    
+    if (this.isInteractive(event.target as HTMLElement)) {
+      this.audioService.playClickSound();
+    }
+  }
+
+  @HostListener('document:mouseover', ['$event'])
+  onDocumentMouseOver(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    const interactiveElement = target.closest('a, button, input, select, textarea, [role="button"], [role="link"], .clickable, .music-toggle, .menu-toggle, .card, .glass-card');
+    
+    if (interactiveElement && interactiveElement !== this.lastHoveredElement) {
+      this.audioService.playHoverSound();
+      this.lastHoveredElement = interactiveElement;
+    } else if (!interactiveElement) {
+      this.lastHoveredElement = null;
+    }
+  }
+
+  private isInteractive(element: HTMLElement | null): boolean {
+    if (!element) return false;
+    return !!element.closest('a, button, input, select, textarea, [role="button"], [role="link"], .clickable, .music-toggle, .menu-toggle, .card, .glass-card');
   }
 }
