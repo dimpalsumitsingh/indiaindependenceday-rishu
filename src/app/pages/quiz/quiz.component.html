@@ -1,0 +1,50 @@
+<div class="page-container fade-in">
+  <div class="page-header text-center">
+    <h1 class="heading-primary text-gradient">Test Your Knowledge</h1>
+    <p class="subtitle">How well do you know India's history?</p>
+  </div>
+
+  <div class="quiz-container container" *ngIf="questions.length > 0">
+    <div class="glass-card quiz-card">
+      <div *ngIf="!showScore">
+        <div class="quiz-header">
+          <span>Question {{ currentQuestion + 1 }} / {{ questions.length }}</span>
+          <span>Score: {{ score }}</span>
+        </div>
+        
+        <h2 class="question-text">{{ questions[currentQuestion].question }}</h2>
+        
+        <div class="options-grid">
+          <button class="option-btn" 
+                  *ngFor="let option of questions[currentQuestion].options; let i = index"
+                  (click)="selectOption(i)"
+                  [ngClass]="{
+                    'selected': selectedOption === i,
+                    'correct': isAnswered && i === questions[currentQuestion].answer,
+                    'wrong': isAnswered && selectedOption === i && i !== questions[currentQuestion].answer
+                  }"
+                  [disabled]="isAnswered">
+            {{ option }}
+          </button>
+        </div>
+        
+        <div class="quiz-footer" *ngIf="isAnswered">
+          <button class="btn btn-primary" (click)="nextQuestion()">
+            {{ currentQuestion === questions.length - 1 ? 'Finish' : 'Next' }}
+          </button>
+        </div>
+      </div>
+      
+      <div *ngIf="showScore" class="score-section text-center">
+        <h2>Quiz Completed!</h2>
+        <div class="score-circle">
+          <span>{{ score }}</span> / {{ questions.length }}
+        </div>
+        <p *ngIf="score === questions.length">Perfect Score! You are a true patriot!</p>
+        <p *ngIf="score < questions.length && score > 2">Good job! Keep learning.</p>
+        <p *ngIf="score <= 2">Time to brush up on some history!</p>
+        <button class="btn btn-primary mt-4" (click)="restartQuiz()">Try Again</button>
+      </div>
+    </div>
+  </div>
+</div>

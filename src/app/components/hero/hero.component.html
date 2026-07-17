@@ -1,0 +1,31 @@
+<section class="hero-section">
+  <div class="hero-bg">
+    <div class="overlay"></div>
+    <!-- Use a good placeholder for the flag/Red fort -->
+    <img src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?q=80&w=2070&auto=format&fit=crop" alt="Indian Flag Background" class="bg-img parallax" />
+  </div>
+
+  <div class="hero-content">
+    <div class="glass-card hero-card fade-in">
+      <div class="chakra-wrapper">
+        <i class="fa-solid fa-dharmachakra chakra-spin"></i>
+      </div>
+      <h1 class="main-title text-gradient">Happy Independence Day</h1>
+      <p class="subtitle">Celebrating Freedom, Unity and Pride</p>
+      
+      <div class="cta-group">
+        <a routerLink="/history" class="btn btn-primary">Explore History</a>
+        <a routerLink="/freedom-fighters" class="btn btn-secondary">Freedom Fighters</a>
+      </div>
+
+      <button class="music-btn" (click)="toggleMusic()">
+        <i class="fa-solid" [ngClass]="isPlaying ? 'fa-volume-high' : 'fa-volume-xmark'"></i>
+        <span class="music-text">{{ isPlaying ? 'Pause Music' : 'Play Music' }}</span>
+      </button>
+      <!-- Hidden Audio Element -->
+      <audio #bgMusic loop>
+        <source src="assets/audio/ae_watan.mp4" type="audio/mp4">
+      </audio>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+<div class="timeline-container">
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let item of timelineData; let i = index" [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
+      <div class="timeline-content glass-card" [class.expanded]="expandedIndex === i" (click)="toggleExpand(i)">
+        <div class="timeline-icon">
+          <i class="fa-solid {{item.icon}}"></i>
+        </div>
+        <div class="timeline-year">{{ item.year }}</div>
+        <h3 class="timeline-title">{{ item.title }}</h3>
+        <p class="timeline-desc" *ngIf="expandedIndex === i">{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

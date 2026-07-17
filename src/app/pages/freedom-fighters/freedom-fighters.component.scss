@@ -1,0 +1,85 @@
+.page-container {
+  padding: 100px 20px 60px;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 50px;
+  h1 { font-size: 3rem; margin-bottom: 10px; }
+  .subtitle { font-size: 1.2rem; color: #555; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fighters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.fighter-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-10px);
+    .card-img-wrapper img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.card-img-wrapper {
+  height: 250px;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+  }
+}
+
+.card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fighter-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-navy);
+  margin: 0 0 5px 0;
+}
+
+.fighter-dates {
+  font-size: 0.9rem;
+  color: var(--color-green);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.fighter-contrib {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.fighter-quote {
+  font-style: italic;
+  color: var(--color-saffron);
+  border-left: 3px solid var(--color-saffron);
+  padding-left: 15px;
+  margin: 0;
+  font-weight: 600;
+}

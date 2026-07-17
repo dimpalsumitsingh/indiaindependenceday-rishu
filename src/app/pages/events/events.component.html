@@ -1,0 +1,23 @@
+<div class="page-container fade-in">
+  <div class="page-header text-center">
+    <h1 class="heading-primary text-gradient">Upcoming Events</h1>
+    <p class="subtitle">Join the celebrations across the country</p>
+  </div>
+
+  <div class="events-container container">
+    <div class="event-card glass-card" *ngFor="let event of events">
+      <div class="event-image">
+        <img [src]="event.image" [alt]="event.title">
+      </div>
+      <div class="event-details">
+        <h2>{{ event.title }}</h2>
+        <div class="event-meta">
+          <span><i class="fa-solid fa-location-dot"></i> {{ event.location }}</span>
+          <span><i class="fa-regular fa-calendar"></i> {{ event.date }}</span>
+        </div>
+        <p>{{ event.description }}</p>
+        <button class="btn btn-primary">RSVP Now</button>
+      </div>
+    </div>
+  </div>
+</div>

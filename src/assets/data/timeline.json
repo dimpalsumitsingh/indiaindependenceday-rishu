@@ -1,0 +1,56 @@
+[
+  {
+    "year": "1857",
+    "title": "First War of Independence",
+    "description": "Also known as the Sepoy Mutiny, it was the first widespread but unsuccessful rebellion against the British East India Company.",
+    "icon": "fa-fire"
+  },
+  {
+    "year": "1885",
+    "title": "Indian National Congress Founded",
+    "description": "Formed to seek a greater share in government for educated Indians, later becoming the principal leader of the Indian independence movement.",
+    "icon": "fa-users"
+  },
+  {
+    "year": "1905",
+    "title": "Swadeshi Movement",
+    "description": "Started as a protest against the partition of Bengal, promoting the use of Indian-made goods over British goods.",
+    "icon": "fa-hand-fist"
+  },
+  {
+    "year": "1919",
+    "title": "Jallianwala Bagh Massacre",
+    "description": "British troops fired on a large crowd of unarmed Indians in an open space known as the Jallianwala Bagh in Amritsar.",
+    "icon": "fa-person-falling"
+  },
+  {
+    "year": "1920",
+    "title": "Non-Cooperation Movement",
+    "description": "Launched by Mahatma Gandhi with the aim of self-governance and obtaining full independence as the Indian National Congress.",
+    "icon": "fa-hands-holding-circle"
+  },
+  {
+    "year": "1930",
+    "title": "Dandi March",
+    "description": "The Salt Satyagraha was a major nonviolent protest action led by Mahatma Gandhi to produce salt from the seawater, breaking the salt tax law.",
+    "icon": "fa-shoe-prints"
+  },
+  {
+    "year": "1942",
+    "title": "Quit India Movement",
+    "description": "A movement launched at the Bombay session of the All-India Congress Committee by Mahatma Gandhi demanding an end to British rule.",
+    "icon": "fa-person-walking-arrow-right"
+  },
+  {
+    "year": "1947",
+    "title": "India became Independent",
+    "description": "On 15 August 1947, India gained its independence, ending almost 200 years of British rule.",
+    "icon": "fa-flag"
+  },
+  {
+    "year": "1950",
+    "title": "Constitution came into force",
+    "description": "On 26 January 1950, the Constitution of India came into effect, making India a sovereign democratic republic.",
+    "icon": "fa-book"
+  }
+]

@@ -1,0 +1,21 @@
+.page-container {
+  padding: 100px 20px 60px;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

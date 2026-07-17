@@ -1,0 +1,23 @@
+<nav class="navbar" [ngClass]="{'scrolled': isScrolled}">
+  <div class="nav-container">
+    <a routerLink="/" class="logo text-gradient heading-primary">
+      <i class="fa-solid fa-dharmachakra fa-spin" style="--fa-animation-duration: 10s;"></i> Independence Day
+    </a>
+    
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <i class="fa-solid" [ngClass]="isMenuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+    </div>
+
+    <ul class="nav-links" [ngClass]="{'open': isMenuOpen}">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/history" routerLinkActive="active" (click)="toggleMenu()">History</a></li>
+      <li><a routerLink="/timeline" routerLinkActive="active" (click)="toggleMenu()">Timeline</a></li>
+      <li><a routerLink="/freedom-fighters" routerLinkActive="active" (click)="toggleMenu()">Freedom Fighters</a></li>
+      <li><a routerLink="/stories" routerLinkActive="active" (click)="toggleMenu()">Stories</a></li>
+      <li><a routerLink="/gallery" routerLinkActive="active" (click)="toggleMenu()">Gallery</a></li>
+      <li><a routerLink="/events" routerLinkActive="active" (click)="toggleMenu()">Events</a></li>
+      <li><a routerLink="/quiz" routerLinkActive="active" (click)="toggleMenu()">Quiz</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>

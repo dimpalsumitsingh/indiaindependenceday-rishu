@@ -1,0 +1,18 @@
+<div class="masonry-gallery">
+  <div class="gallery-item" *ngFor="let img of images" (click)="openLightbox(img)">
+    <img [src]="img.url" [alt]="img.title">
+    <div class="overlay">
+      <span class="title">{{ img.title }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" *ngIf="selectedImage" (click)="closeLightbox()">
+  <div class="lightbox-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+    <img [src]="selectedImage.url" [alt]="selectedImage.title">
+    <div class="lightbox-caption">
+      <h3>{{ selectedImage.title }}</h3>
+    </div>
+  </div>
+</div>

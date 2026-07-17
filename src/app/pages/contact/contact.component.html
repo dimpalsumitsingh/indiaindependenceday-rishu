@@ -1,0 +1,43 @@
+<div class="page-container fade-in">
+  <div class="page-header text-center">
+    <h1 class="heading-primary text-gradient">Contact Us</h1>
+    <p class="subtitle">We'd love to hear from you</p>
+  </div>
+
+  <div class="contact-container container">
+    <div class="glass-card contact-form-wrapper">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" formControlName="name" placeholder="Your Name" 
+                 [ngClass]="{'error': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" placeholder="Your Email"
+                 [ngClass]="{'error': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" formControlName="message" placeholder="Your Message"
+                    [ngClass]="{'error': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid || isSubmitted">
+          {{ isSubmitted ? 'Sending...' : 'Send Message' }}
+        </button>
+      </form>
+    </div>
+    
+    <div class="map-placeholder glass-card">
+      <div class="map-overlay">
+        <h3><i class="fa-solid fa-location-dot"></i> New Delhi, India</h3>
+        <p>15 August Marg, Independence Square</p>
+      </div>
+      <!-- Normally an iframe would go here -->
+      <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2070&auto=format&fit=crop" alt="Map Placeholder" class="map-img">
+    </div>
+  </div>
+</div>

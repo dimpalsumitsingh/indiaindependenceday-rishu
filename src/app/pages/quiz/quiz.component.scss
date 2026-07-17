@@ -1,0 +1,116 @@
+.page-container {
+  padding: 100px 20px 60px;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 50px;
+  h1 { font-size: 3rem; margin-bottom: 10px; }
+  .subtitle { font-size: 1.2rem; color: #555; }
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz-card {
+  padding: 40px;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: var(--color-green);
+  font-size: 1.2rem;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  color: var(--color-navy);
+  margin-bottom: 30px;
+  font-family: var(--font-heading);
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.option-btn {
+  padding: 15px 20px;
+  border: 2px solid rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-primary);
+  
+  &:hover:not(:disabled) {
+    background: #f8f9fa;
+    border-color: var(--color-saffron);
+  }
+
+  &.correct {
+    background: var(--color-green);
+    color: white;
+    border-color: var(--color-green);
+  }
+
+  &.wrong {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+  }
+}
+
+.quiz-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &.btn-primary {
+    background: var(--color-navy);
+    color: white;
+    
+    &:hover { background: #000050; transform: translateY(-2px); }
+  }
+}
+
+.score-section {
+  h2 { font-size: 2.5rem; color: var(--color-navy); margin-bottom: 20px; }
+  p { font-size: 1.2rem; color: #555; }
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid var(--color-saffron);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+  font-weight: 700;
+  color: var(--color-green);
+  
+  span { font-size: 4rem; margin-right: 5px; color: var(--color-navy); }
+}
+
+.mt-4 { margin-top: 2rem; }

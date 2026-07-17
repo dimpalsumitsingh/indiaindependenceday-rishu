@@ -1,0 +1,20 @@
+<div class="page-container fade-in">
+  <div class="page-header text-center">
+    <h1 class="heading-primary text-gradient">Freedom Fighters</h1>
+    <p class="subtitle">Remembering the heroes who gave us our tomorrow</p>
+  </div>
+
+  <div class="fighters-grid container">
+    <div class="fighter-card glass-card" *ngFor="let fighter of fighters">
+      <div class="card-img-wrapper">
+        <img [src]="fighter.image" [alt]="fighter.name" class="fighter-img">
+      </div>
+      <div class="card-content">
+        <h3 class="fighter-name">{{ fighter.name }}</h3>
+        <p class="fighter-dates">{{ fighter.birth }} - {{ fighter.death }}</p>
+        <p class="fighter-contrib">{{ fighter.contributions }}</p>
+        <blockquote class="fighter-quote">"{{ fighter.quote }}"</blockquote>
+      </div>
+    </div>
+  </div>
+</div>
