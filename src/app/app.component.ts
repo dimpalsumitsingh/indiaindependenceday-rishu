@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgxParticlesModule, NgParticlesService } from '@tsparticles/angular';
@@ -87,12 +88,19 @@ export class AppComponent implements OnInit {
 
   constructor(
     private readonly ngParticlesService: NgParticlesService,
-    private audioService: AudioService
+    private readonly audioService: AudioService,
+    private readonly router: Router
   ) {}
 
   ngOnInit(): void {
     void this.ngParticlesService.init(async (engine: Engine) => {
       await loadFull(engine);
+    });
+
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     });
   }
 

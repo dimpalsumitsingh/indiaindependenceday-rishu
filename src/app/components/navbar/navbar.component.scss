@@ -6,15 +6,24 @@
   z-index: 1000;
   padding: 20px 0;
   transition: all 0.3s ease;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(19, 136, 8, 0.1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255,153,51,0.08), rgba(255,255,255,0.08), rgba(19,136,8,0.08));
+    pointer-events: none;
+    z-index: -1;
+  }
 
   &.scrolled {
     padding: 10px 0;
-    background: var(--glass-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(19,136,8,0.2);
   }
 
   .nav-container {
@@ -47,10 +56,10 @@
 
     li a {
       text-decoration: none;
-      color: var(--text-dark);
+      color: var(--color-navy);
       font-weight: 600;
       font-size: 1rem;
-      transition: color 0.3s ease;
+      transition: color 0.2s ease, transform 0.2s ease;
       position: relative;
 
       &::after {
@@ -64,11 +73,19 @@
         transition: width 0.3s ease;
       }
 
-      &:hover, &.active {
-        color: var(--color-navy);
+      &:hover,
+      &:focus-visible,
+      &.active {
+        color: var(--color-saffron);
+
         &::after {
           width: 100%;
         }
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(19, 136, 8, 0.22);
       }
     }
   }
@@ -82,8 +99,8 @@
 
   .audio-controls {
     .icon-btn {
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(19, 136, 8, 0.2);
       border-radius: 50%;
       width: 36px;
       height: 36px;
@@ -92,11 +109,14 @@
       justify-content: center;
       cursor: pointer;
       color: var(--color-navy);
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       
-      &:hover {
-        background: rgba(255, 255, 255, 0.5);
+      &:hover,
+      &:focus-visible {
+        background: #ffffff;
         transform: scale(1.05);
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(19, 136, 8, 0.22);
       }
     }
 

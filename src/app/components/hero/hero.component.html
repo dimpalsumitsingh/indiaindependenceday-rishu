@@ -17,15 +17,6 @@
         <a routerLink="/history" class="btn btn-primary">Explore History</a>
         <a routerLink="/freedom-fighters" class="btn btn-secondary">Freedom Fighters</a>
       </div>
-
-      <button class="music-btn" (click)="toggleMusic()">
-        <i class="fa-solid" [ngClass]="isPlaying ? 'fa-volume-high' : 'fa-volume-xmark'"></i>
-        <span class="music-text">{{ isPlaying ? 'Pause Music' : 'Play Music' }}</span>
-      </button>
-      <!-- Hidden Audio Element -->
-      <audio #bgMusic loop>
-        <source src="assets/audio/ae_watan.mp4" type="audio/mp4">
-      </audio>
     </div>
   </div>
 </section>

@@ -1,10 +1,19 @@
 .footer {
-  background: var(--color-navy);
-  color: var(--text-light);
+  background: linear-gradient(180deg, rgba(255,153,51,0.95), rgba(255,255,255,0.98) 33.33%, rgba(19,136,8,0.95) 66.66%);
+  color: var(--text-dark);
   padding: 60px 20px 20px;
   position: relative;
   z-index: 10;
-  
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top center, rgba(255,255,255,0.2), transparent 40%);
+    pointer-events: none;
+  }
+
   .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -12,17 +21,19 @@
     grid-template-columns: 2fr 1fr 1fr;
     gap: 40px;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
   }
 
   .brand {
     h3 {
       font-size: 2rem;
       margin-bottom: 20px;
-      i { color: var(--color-white); }
+      i { color: var(--color-navy); }
     }
     p {
       line-height: 1.6;
-      color: #ccc;
+      color: #333;
       margin-bottom: 20px;
     }
   }
@@ -32,19 +43,23 @@
     gap: 15px;
     
     a {
-      color: var(--text-light);
-      background: rgba(255,255,255,0.1);
+      color: var(--color-navy);
+      background: rgba(255,255,255,0.7);
       width: 40px;
       height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background: var(--color-saffron);
+        color: var(--color-white);
         transform: translateY(-3px);
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(19, 136, 8, 0.22);
       }
     }
   }
@@ -53,7 +68,7 @@
     h4 {
       font-size: 1.2rem;
       margin-bottom: 20px;
-      color: var(--color-white);
+      color: var(--color-navy);
       position: relative;
       display: inline-block;
       
@@ -77,12 +92,15 @@
         margin-bottom: 12px;
         
         a {
-          color: #ccc;
+          color: #111827;
           text-decoration: none;
-          transition: color 0.3s ease;
+          transition: color 0.2s ease, transform 0.2s ease;
           
-          &:hover {
+          &:hover,
+          &:focus-visible {
             color: var(--color-saffron);
+            transform: translateX(2px);
+            outline: none;
           }
         }
       }
@@ -94,9 +112,11 @@
     margin: 0 auto;
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #999;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    color: #030358;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
   }
 
   @media (max-width: 768px) {

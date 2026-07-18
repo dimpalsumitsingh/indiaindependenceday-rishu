@@ -9,6 +9,7 @@ export const routes: Routes = [
   { path: 'gallery', loadComponent: () => import('./pages/gallery-page/gallery-page.component').then(c => c.GalleryPageComponent) },
   { path: 'events', loadComponent: () => import('./pages/events/events.component').then(c => c.EventsComponent) },
   { path: 'quiz', loadComponent: () => import('./pages/quiz/quiz.component').then(c => c.QuizComponent) },
+  { path: 'about', loadComponent: () => import('./pages/about/about.component').then(c => c.AboutComponent) },
   { path: 'contact', loadComponent: () => import('./pages/contact/contact.component').then(c => c.ContactComponent) },
   { path: '**', redirectTo: '' }
 ];
