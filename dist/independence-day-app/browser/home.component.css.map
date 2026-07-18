@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/home/home.component.scss"],
+  "sourcesContent": [".home-page {\r\n  min-height: 100vh;\r\n}\r\n\r\n.about-section {\r\n  padding: 80px 20px;\r\n  background: var(--bg-gradient);\r\n\r\n  .container {\r\n    max-width: 1000px;\r\n    margin: 0 auto;\r\n  }\r\n\r\n  .about-content {\r\n    padding: 50px;\r\n    text-align: center;\r\n    \r\n    h2 {\r\n      font-size: 2.5rem;\r\n      margin-bottom: 30px;\r\n    }\r\n\r\n    p {\r\n      font-size: 1.2rem;\r\n      line-height: 1.8;\r\n      color: #555;\r\n      margin-bottom: 20px;\r\n      \r\n      &:last-child {\r\n        margin-bottom: 0;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .about-section {\r\n    padding: 40px 20px;\r\n    \r\n    .about-content {\r\n      padding: 30px;\r\n      \r\n      h2 {\r\n        font-size: 2rem;\r\n      }\r\n      p {\r\n        font-size: 1.1rem;\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;;AAGF,CAAA;AACE,WAAA,KAAA;AACA,cAAA,IAAA;;AAEA,CAJF,cAIE,CAAA;AACE,aAAA;AACA,UAAA,EAAA;;AAGF,CATF,cASE,CAAA;AACE,WAAA;AACA,cAAA;;AAEA,CAbJ,cAaI,CAJF,cAIE;AACE,aAAA;AACA,iBAAA;;AAGF,CAlBJ,cAkBI,CATF,cASE;AACE,aAAA;AACA,eAAA;AACA,SAAA;AACA,iBAAA;;AAEA,CAxBN,cAwBM,CAfJ,cAeI,CAAA;AACE,iBAAA;;AAMR,OAAA,CAAA,SAAA,EAAA;AACE,GAhCF;AAiCI,aAAA,KAAA;;AAEA,GAnCJ,cAmCI,CA1BF;AA2BI,aAAA;;AAEA,GAtCN,cAsCM,CA7BJ,cA6BI;AACE,eAAA;;AAEF,GAzCN,cAyCM,CAhCJ,cAgCI;AACE,eAAA;;;",
+  "names": []
+}
