@@ -13,7 +13,7 @@ export class NavbarComponent {
   isScrolled = false;
   isMenuOpen = false;
 
-  constructor(public audioService: AudioService) {}
+  constructor(public audioService: AudioService) { }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -25,8 +25,9 @@ export class NavbarComponent {
   }
 
   onNavClick() {
-    this.toggleMenu();
+    this.isMenuOpen = false;
     this.audioService.playClickSound();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   toggleMusic() {
