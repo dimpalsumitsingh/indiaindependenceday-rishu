@@ -11,5 +11,6 @@ export const routes: Routes = [
   { path: 'quiz', loadComponent: () => import('./pages/quiz/quiz.component').then(c => c.QuizComponent) },
   { path: 'about', loadComponent: () => import('./pages/about/about.component').then(c => c.AboutComponent) },
   { path: 'contact', loadComponent: () => import('./pages/contact/contact.component').then(c => c.ContactComponent) },
+  { path: 'national-symbols', loadComponent: () => import('./pages/national-symbols/national-symbols.component').then(c => c.NationalSymbolsComponent) },
   { path: '**', redirectTo: '' }
 ];

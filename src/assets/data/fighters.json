@@ -4,7 +4,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Portrait_Gandhi.jpg",
     "birth": "2 October 1869",
     "death": "30 January 1948",
-    "contributions": "Led India's independence movement through nonviolent civil disobedience.",
+    "contributions": "Led India's independence movement through nonviolent civil disobedience. Pioneer of Satyagraha — resistance through mass nonviolent protest.",
     "quote": "Be the change that you wish to see in the world."
   },
   {
@@ -12,7 +12,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Bhagat_Singh_1929.jpg",
     "birth": "28 September 1907",
     "death": "23 March 1931",
-    "contributions": "A charismatic Indian revolutionary who became a hero of the independence movement.",
+    "contributions": "A charismatic Indian revolutionary who became a hero of the independence movement. His martyrdom at 23 inspired generations.",
     "quote": "They may kill me, but they cannot kill my ideas."
   },
   {
@@ -20,7 +20,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Subhas_Chandra_Bose_NRB.jpg",
     "birth": "23 January 1897",
     "death": "18 August 1945",
-    "contributions": "Indian nationalist whose defiant patriotism made him a hero in India.",
+    "contributions": "Indian nationalist whose defiant patriotism made him a hero. Founded the Indian National Army (Azad Hind Fauj) to fight for independence.",
     "quote": "Give me blood and I will give you freedom!"
   },
   {
@@ -28,7 +28,7 @@
     "image": "assets/images/sardar_patel.png",
     "birth": "31 October 1875",
     "death": "15 December 1950",
-    "contributions": "Played a leading role in the country's struggle for independence and guided its integration into a united, independent nation.",
+    "contributions": "Played a leading role in the country's struggle for independence and guided its integration into a united, independent nation. Known as the Iron Man of India.",
     "quote": "Faith is of no evil in absence of strength. Faith and strength, both are essential to accomplish any great work."
   },
   {
@@ -36,7 +36,63 @@
     "image": "assets/images/rani_lakshmibai.png",
     "birth": "19 November 1828",
     "death": "18 June 1858",
-    "contributions": "One of the leading figures of the Indian Rebellion of 1857 and became a symbol of resistance to the British Raj.",
+    "contributions": "One of the leading figures of the Indian Rebellion of 1857 and became a symbol of resistance to the British Raj. She fought valiantly for the freedom of Jhansi.",
     "quote": "I shall not surrender my Jhansi."
+  },
+  {
+    "name": "Chandrashekhar Azad",
+    "image": "assets/images/chandrashekhar_azad.png",
+    "birth": "23 July 1906",
+    "death": "27 February 1931",
+    "contributions": "A fearless revolutionary who reorganized the Hindustan Republican Association. He vowed to never be captured alive by the British and kept his oath till his last breath.",
+    "quote": "If yet your blood does not rage, then it is water that flows in your veins."
+  },
+  {
+    "name": "Mangal Pandey",
+    "image": "assets/images/mangal_pandey.png",
+    "birth": "19 July 1827",
+    "death": "8 April 1857",
+    "contributions": "An Indian soldier who played a key role in events immediately preceding the Indian Rebellion of 1857. His courageous act of defiance against British officers sparked the First War of Independence.",
+    "quote": "The time has come to fight. Rise up against the oppressors."
+  },
+  {
+    "name": "Sarojini Naidu",
+    "image": "assets/images/sarojini_naidu.png",
+    "birth": "13 February 1879",
+    "death": "2 March 1949",
+    "contributions": "Known as the Nightingale of India, she was a poet and political activist. She became the first woman president of the Indian National Congress and the first woman governor of an Indian state.",
+    "quote": "We want deeper sincerity of motive, a greater courage in speech and earnestness in action."
+  },
+  {
+    "name": "Bal Gangadhar Tilak",
+    "image": "assets/images/bal_gangadhar_tilak.png",
+    "birth": "23 July 1856",
+    "death": "1 August 1920",
+    "contributions": "One of the first leaders of the independence movement, he is known as the Father of Indian Unrest. He championed the cause of Swaraj (self-rule) and awakened nationalist consciousness.",
+    "quote": "Swaraj is my birthright and I shall have it!"
+  },
+  {
+    "name": "Lala Lajpat Rai",
+    "image": "assets/images/lala_lajpat_rai.png",
+    "birth": "28 January 1865",
+    "death": "17 November 1928",
+    "contributions": "Known as the Lion of Punjab, he was a fierce critic of British rule. He led the protest against the Simon Commission and was fatally injured during the lathi charge in Lahore.",
+    "quote": "The blows struck at me today will be the last nails in the coffin of British rule in India."
+  },
+  {
+    "name": "Tantia Tope",
+    "image": "assets/images/tantia_tope.png",
+    "birth": "1814",
+    "death": "18 April 1859",
+    "contributions": "A general in the Indian Rebellion of 1857 and a close associate of Nana Sahib and Rani Lakshmibai. He led guerrilla warfare against the British and became a legendary figure of resistance.",
+    "quote": "Freedom is worth any sacrifice."
+  },
+  {
+    "name": "Shivaram Rajguru",
+    "image": "assets/images/rajguru.png",
+    "birth": "24 August 1908",
+    "death": "23 March 1931",
+    "contributions": "A revolutionary who, along with Bhagat Singh and Sukhdev, was hanged for the assassination of British police officer J.P. Saunders in retaliation for the death of Lala Lajpat Rai.",
+    "quote": "Our sacrifice will not go in vain. India will be free."
   }
 ]

@@ -2,21 +2,78 @@
   {
     "title": "The Dandi March",
     "image": "assets/images/salt_march.png",
-    "summary": "The Salt March, also known as the Dandi March and the Dandi Satyagraha, was an act of nonviolent civil disobedience in colonial India led by Mahatma Gandhi.",
+    "summary": "The Salt March, also known as the Dandi March and the Dandi Satyagraha, was an act of nonviolent civil disobedience in colonial India led by Mahatma Gandhi. It was a pivotal moment that galvanized the entire nation against British salt taxes and colonial economic exploitation.",
     "events": [
-      "12 March 1930: March begins from Sabarmati Ashram.",
-      "6 April 1930: Gandhi breaks the salt laws at Dandi.",
-      "Mass civil disobedience follows across India."
+      "12 March 1930: March begins from Sabarmati Ashram with 78 volunteers.",
+      "6 April 1930: Gandhi breaks the salt laws at Dandi beach.",
+      "Mass civil disobedience follows across India, with over 60,000 people arrested.",
+      "The march drew worldwide attention and sympathy for the Indian independence movement."
     ]
   },
   {
     "title": "Quit India Movement",
     "image": "assets/images/quit_india.png",
-    "summary": "Launched by Mahatma Gandhi at the Bombay session of the All-India Congress Committee demanding an end to British rule in India.",
+    "summary": "Launched by Mahatma Gandhi at the Bombay session of the All-India Congress Committee on 8 August 1942, the Quit India Movement demanded an end to British rule in India. Gandhi's call of 'Do or Die' inspired millions to rise against colonial oppression.",
     "events": [
-      "8 August 1942: Quit India resolution passed.",
-      "9 August 1942: Mass arrests of Congress leaders.",
-      "Widespread protests and parallel governments formed."
+      "8 August 1942: Quit India resolution passed at Gowalia Tank Maidan, Bombay.",
+      "9 August 1942: Mass arrests of Congress leaders including Gandhi, Nehru, and Patel.",
+      "Widespread protests, strikes, and parallel governments formed across India.",
+      "Despite brutal repression, the movement demonstrated India's resolve for freedom."
+    ]
+  },
+  {
+    "title": "The Non-Cooperation Movement",
+    "image": "assets/images/non_cooperation.png",
+    "summary": "Launched by Mahatma Gandhi in 1920, the Non-Cooperation Movement was the first mass nationwide movement against British rule. Indians were urged to withdraw cooperation from the British government by boycotting British goods, courts, schools, and government services.",
+    "events": [
+      "1 August 1920: Gandhi launches the Non-Cooperation Movement.",
+      "Millions of Indians return British titles, honors, and government positions.",
+      "Foreign cloth bonfires spread across India as people adopt Khadi.",
+      "5 February 1922: Movement suspended after Chauri Chaura violence incident."
+    ]
+  },
+  {
+    "title": "The Jallianwala Bagh Tragedy",
+    "image": "assets/images/jallianwala_bagh.png",
+    "summary": "On 13 April 1919, thousands of unarmed Indians gathered in Jallianwala Bagh, Amritsar, for a peaceful meeting. General Dyer ordered his troops to open fire without warning, killing hundreds and wounding over a thousand. This horrific event became a turning point in India's freedom struggle.",
+    "events": [
+      "13 April 1919: Troops open fire on a peaceful gathering on the day of Baisakhi.",
+      "Hundreds killed and over 1,200 wounded in the enclosed garden with no escape.",
+      "Rabindranath Tagore renounces his knighthood in protest.",
+      "The tragedy awakened nationalist consciousness across India and the world."
+    ]
+  },
+  {
+    "title": "The Swadeshi Movement",
+    "image": "assets/images/swadeshi_movement.png",
+    "summary": "The Swadeshi Movement (1905–1911) was an economic strategy aimed at promoting Indian-made goods and boycotting British manufactures. Triggered by the partition of Bengal, it became one of the most successful movements in the Indian independence struggle.",
+    "events": [
+      "7 August 1905: Formal proclamation of Swadeshi Movement at Calcutta Town Hall.",
+      "The Charkha (spinning wheel) becomes a symbol of self-reliance.",
+      "Indian textile mills flourish as people pledge to wear only Khadi.",
+      "The movement laid the foundation for India's economic self-sufficiency."
+    ]
+  },
+  {
+    "title": "The Royal Indian Navy Mutiny",
+    "image": "assets/images/naval_mutiny.png",
+    "summary": "In February 1946, Indian sailors of the Royal Indian Navy revolted against the British, striking on ships, in shore establishments, and in dockyards. The mutiny involved 78 ships, 20 shore establishments, and 20,000 sailors, shaking the foundation of British military control in India.",
+    "events": [
+      "18 February 1946: Sailors in HMIS Talwar go on hunger strike against racial discrimination.",
+      "The revolt spreads across Bombay, Karachi, Calcutta, and other port cities.",
+      "20,000 sailors raise the Indian tricolor on British warships.",
+      "The mutiny convinced the British that their Indian armed forces could no longer be relied upon."
+    ]
+  },
+  {
+    "title": "The First Independence Day – 15 August 1947",
+    "image": "assets/images/independence_day_1947.png",
+    "summary": "After nearly two centuries of British colonial rule and decades of tireless struggle, India finally gained independence on 15 August 1947. Jawaharlal Nehru's iconic 'Tryst with Destiny' speech at midnight marked the birth of a free nation as millions celebrated across the subcontinent.",
+    "events": [
+      "14 August 1947 midnight: Nehru delivers the 'Tryst with Destiny' speech in Parliament.",
+      "15 August 1947: The Indian tricolor is hoisted at the Red Fort for the first time.",
+      "Lord Mountbatten transfers power to India's first government.",
+      "Celebrations erupt across the nation — a free India is born after 200 years of colonial rule."
     ]
   }
 ]

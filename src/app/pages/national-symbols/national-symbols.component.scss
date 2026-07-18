@@ -1,0 +1,124 @@
+.page-container {
+  padding: 100px 20px 60px;
+  min-height: 100vh;
+}
+
+.page-header {
+  margin-bottom: 50px;
+  h1 { font-size: 3rem; margin-bottom: 10px; }
+  .subtitle { font-size: 1.2rem; color: #555; }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.symbols-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.symbol-card {
+  padding: 40px;
+}
+
+.symbol-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(255, 153, 51, 0.2);
+  padding-bottom: 20px;
+
+  .icon-large {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    color: var(--color-navy);
+    font-family: var(--font-heading);
+    margin-bottom: 5px;
+  }
+
+  .symbol-meta {
+    color: #666;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+}
+
+.anthem-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.lyrics-card {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid var(--color-saffron);
+  text-align: center;
+
+  h3 {
+    color: var(--color-green);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+
+  .hindi-text {
+    font-family: "Mangal", "Aparajita", "Nirmala UI", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    white-space: nowrap;
+  }
+}
+
+.info-section {
+  padding: 10px;
+
+  h4 {
+    color: var(--color-navy);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+  }
+
+  .playing-time {
+    display: inline-block;
+    background: rgba(19, 136, 8, 0.1);
+    color: var(--color-green);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .anthem-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .symbol-card {
+    padding: 20px;
+  }
+  
+  .lyrics-card .hindi-text {
+    font-size: 1.1rem;
+    white-space: normal;
+  }
+}
