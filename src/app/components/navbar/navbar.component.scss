@@ -27,20 +27,23 @@
   }
 
   .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
   }
 
   .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
 
     i {
       color: var(--color-navy);
@@ -50,9 +53,13 @@
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 16px;
     margin: 0;
     padding: 0;
+    flex: 1;
 
     li a {
       text-decoration: none;
