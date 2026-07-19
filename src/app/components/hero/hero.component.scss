@@ -62,14 +62,15 @@
   }
 
   .main-title {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 10px;
-    color: var(--color-navy);
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.12);
-    background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: currentColor;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, var(--color-saffron), #c06000, var(--color-navy));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .subtitle {
@@ -86,70 +87,8 @@
     margin-bottom: 30px;
   }
 
-  .btn {
-    padding: 14px 32px;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 160px;
-    border: 2px solid transparent;
 
-    &:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 4px rgba(19, 136, 8, 0.25);
-    }
-
-    &.btn-primary {
-      background: var(--color-navy);
-      color: var(--color-white);
-      border-color: var(--color-navy);
-
-      &:hover {
-        background: #001f54;
-        transform: translateY(-2px);
-      }
-    }
-
-    &.btn-secondary {
-      background: transparent;
-      color: var(--color-navy);
-      border: 2px solid var(--color-navy);
-
-      &:hover {
-        background: rgba(19, 136, 8, 0.08);
-        transform: translateY(-2px);
-      }
-    }
-
-    &:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 4px rgba(19, 136, 8, 0.25);
-    }
-  }
-
-  .music-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--color-white);
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 auto;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-  }
+  .music-btn { display: none; }
 
   @keyframes slowZoom {
     0% { transform: scale(1); }

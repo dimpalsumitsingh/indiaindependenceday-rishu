@@ -1,15 +1,5 @@
 [
   {
-    "url": "https://images.unsplash.com/photo-1532375810709-75b1da00537c",
-    "title": "Indian Flag",
-    "category": "Symbols"
-  },
-  {
-    "url": "https://images.unsplash.com/photo-1587474260584-136574528ed5",
-    "title": "India Gate",
-    "category": "Monuments"
-  },
-  {
     "url": "assets/images/red_fort.png",
     "title": "Red Fort",
     "category": "Monuments"
@@ -20,13 +10,38 @@
     "category": "Heritage"
   },
   {
-    "url": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da",
-    "title": "Culture",
-    "category": "Culture"
+    "url": "assets/images/independence_day_1947.png",
+    "title": "Independence Day 1947",
+    "category": "History"
+  },
+  {
+    "url": "assets/images/salt_march.png",
+    "title": "Salt March",
+    "category": "History"
+  },
+  {
+    "url": "assets/images/quit_india.png",
+    "title": "Quit India Movement",
+    "category": "History"
   },
   {
     "url": "assets/images/india.png",
     "title": "Spirit of India",
     "category": "Culture"
+  },
+  {
+    "url": "assets/images/jallianwala_bagh.png",
+    "title": "Jallianwala Bagh",
+    "category": "History"
+  },
+  {
+    "url": "assets/images/non_cooperation.png",
+    "title": "Non-Cooperation Movement",
+    "category": "History"
+  },
+  {
+    "url": "assets/images/national_flag.png",
+    "title": "Tiranga — National Flag",
+    "category": "Symbols"
   }
 ]

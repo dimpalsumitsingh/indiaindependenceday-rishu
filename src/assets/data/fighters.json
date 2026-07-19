@@ -4,7 +4,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Portrait_Gandhi.jpg",
     "birth": "2 October 1869",
     "death": "30 January 1948",
-    "contributions": "Led India's independence movement through nonviolent civil disobedience. Pioneer of Satyagraha — resistance through mass nonviolent protest.",
+    "contributions": "Led India's independence movement through nonviolent civil disobedience. Pioneer of Satyagraha — resistance through mass nonviolent protest. Championed the Salt March, Non-Cooperation Movement, and Quit India Movement.",
     "quote": "Be the change that you wish to see in the world."
   },
   {
@@ -12,7 +12,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/Bhagat_Singh_1929.jpg",
     "birth": "28 September 1907",
     "death": "23 March 1931",
-    "contributions": "A charismatic Indian revolutionary who became a hero of the independence movement. His martyrdom at 23 inspired generations.",
+    "contributions": "A charismatic Indian revolutionary who became a hero of the independence movement. Threw bombs in the Central Legislative Assembly to 'make the deaf hear'. His martyrdom at 23 inspired generations to join the freedom struggle.",
     "quote": "They may kill me, but they cannot kill my ideas."
   },
   {
@@ -20,7 +20,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Subhas_Chandra_Bose_NRB.jpg",
     "birth": "23 January 1897",
     "death": "18 August 1945",
-    "contributions": "Indian nationalist whose defiant patriotism made him a hero. Founded the Indian National Army (Azad Hind Fauj) to fight for independence.",
+    "contributions": "Indian nationalist whose defiant patriotism made him a hero. Founded the Indian National Army (Azad Hind Fauj) to fight for independence from British rule.",
     "quote": "Give me blood and I will give you freedom!"
   },
   {
@@ -28,15 +28,15 @@
     "image": "assets/images/sardar_patel.png",
     "birth": "31 October 1875",
     "death": "15 December 1950",
-    "contributions": "Played a leading role in the country's struggle for independence and guided its integration into a united, independent nation. Known as the Iron Man of India.",
-    "quote": "Faith is of no evil in absence of strength. Faith and strength, both are essential to accomplish any great work."
+    "contributions": "Played a leading role in the country's struggle for independence and guided its integration into a united, independent nation. Known as the Iron Man of India, he unified over 565 princely states.",
+    "quote": "Faith is of no avail in absence of strength. Faith and strength, both are essential to accomplish any great work."
   },
   {
     "name": "Rani Lakshmibai",
     "image": "assets/images/rani_lakshmibai.png",
     "birth": "19 November 1828",
     "death": "18 June 1858",
-    "contributions": "One of the leading figures of the Indian Rebellion of 1857 and became a symbol of resistance to the British Raj. She fought valiantly for the freedom of Jhansi.",
+    "contributions": "One of the leading figures of the Indian Rebellion of 1857 and became a symbol of resistance to the British Raj. She fought valiantly for the freedom of Jhansi and died on the battlefield.",
     "quote": "I shall not surrender my Jhansi."
   },
   {
@@ -44,7 +44,7 @@
     "image": "assets/images/chandrashekhar_azad.png",
     "birth": "23 July 1906",
     "death": "27 February 1931",
-    "contributions": "A fearless revolutionary who reorganized the Hindustan Republican Association. He vowed to never be captured alive by the British and kept his oath till his last breath.",
+    "contributions": "A fearless revolutionary who reorganized the Hindustan Republican Association. He vowed to never be captured alive by the British and kept his oath till his last breath in Alfred Park, Allahabad.",
     "quote": "If yet your blood does not rage, then it is water that flows in your veins."
   },
   {
@@ -52,7 +52,7 @@
     "image": "assets/images/mangal_pandey.png",
     "birth": "19 July 1827",
     "death": "8 April 1857",
-    "contributions": "An Indian soldier who played a key role in events immediately preceding the Indian Rebellion of 1857. His courageous act of defiance against British officers sparked the First War of Independence.",
+    "contributions": "An Indian soldier who played a key role in events immediately preceding the Indian Rebellion of 1857. His courageous act of defiance against British officers at Barrackpore sparked the First War of Independence.",
     "quote": "The time has come to fight. Rise up against the oppressors."
   },
   {
@@ -68,7 +68,7 @@
     "image": "assets/images/bal_gangadhar_tilak.png",
     "birth": "23 July 1856",
     "death": "1 August 1920",
-    "contributions": "One of the first leaders of the independence movement, he is known as the Father of Indian Unrest. He championed the cause of Swaraj (self-rule) and awakened nationalist consciousness.",
+    "contributions": "One of the first leaders of the independence movement, known as the Father of Indian Unrest. He championed the cause of Swaraj (self-rule) and awakened nationalist consciousness across India.",
     "quote": "Swaraj is my birthright and I shall have it!"
   },
   {

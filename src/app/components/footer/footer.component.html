@@ -1,47 +1,56 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-grid">
-      
+
       <!-- Brand Section -->
       <div class="footer-brand">
-        <a routerLink="/" class="logo text-gradient heading-primary">
-          <i class="fa-solid fa-dharmachakra fa-spin" style="--fa-animation-duration: 15s;"></i> 
-          {{ langService.currentLang === 'hi' ? 'स्वतंत्रता दिवस' : 'Independence Day' }}
+        <a routerLink="/" class="footer-logo">
+          <i class="fa-solid fa-dharmachakra fa-spin" style="--fa-animation-duration: 15s; color: var(--color-saffron);"></i>
+          <span>{{ langService.currentLang === 'hi' ? 'स्वतंत्रता दिवस' : 'Independence Day' }}</span>
         </a>
         <p class="brand-desc">
-          {{ t?.footer?.brandDesc || 'Celebrating the spirit of freedom, unity, and pride of India. A tribute to the heroes of our nation.' }}
+          {{ t?.footer?.brandDesc || 'Celebrating the spirit of freedom, unity and pride of India. A tribute to the heroes of our nation.' }}
         </p>
+        <!-- Lang toggle in footer too -->
+        <button class="lang-btn" (click)="langService.toggleLanguage()">
+          {{ langService.currentLang === 'hi' ? '🇬🇧 Switch to English' : '🇮🇳 हिंदी में देखें' }}
+        </button>
       </div>
 
-      <!-- Quick Links (6 links) -->
+      <!-- Quick Links -->
       <div class="footer-links">
-        <h3 class="heading-primary">{{ t?.footer?.quickLinks || 'Quick Links' }}</h3>
+        <h3>{{ t?.footer?.quickLinks || 'Quick Links' }}</h3>
         <ul>
-          <li><a routerLink="/" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.home || 'Home' }}</a></li>
-          <li><a routerLink="/history" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.history || 'History' }}</a></li>
-          <li><a routerLink="/timeline" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.timeline || 'Timeline' }}</a></li>
-          <li><a routerLink="/freedom-fighters" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.freedomFighters || 'Freedom Fighters' }}</a></li>
-          <li><a routerLink="/national-symbols" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.nationalSymbols || 'National Symbols' }}</a></li>
-          <li><a routerLink="/stories" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.stories || 'Stories' }}</a></li>
+          <li><a routerLink="/">{{ t?.nav?.home || 'होम' }}</a></li>
+          <li><a routerLink="/history">{{ t?.nav?.history || 'इतिहास' }}</a></li>
+          <li><a routerLink="/timeline">{{ t?.nav?.timeline || 'समय-रेखा' }}</a></li>
+          <li><a routerLink="/freedom-fighters">{{ t?.nav?.freedomFighters || 'स्वतंत्रता सेनानी' }}</a></li>
+          <li><a routerLink="/national-symbols">{{ t?.nav?.nationalSymbols || 'राष्ट्रीय प्रतीक' }}</a></li>
+          <li><a routerLink="/stories">{{ t?.nav?.stories || 'कहानियाँ' }}</a></li>
         </ul>
       </div>
 
-      <!-- More Links (5 links) -->
+      <!-- More Links -->
       <div class="footer-links">
-        <h3 class="heading-primary">{{ t?.footer?.more || 'More' }}</h3>
+        <h3>{{ t?.footer?.more || 'More' }}</h3>
         <ul>
-          <li><a routerLink="/gallery" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.gallery || 'Gallery' }}</a></li>
-          <li><a routerLink="/events" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.events || 'Events' }}</a></li>
-          <li><a routerLink="/quiz" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.quiz || 'Quiz' }}</a></li>
-          <li><a routerLink="/about" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.about || 'About' }}</a></li>
-          <li><a routerLink="/contact" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.contact || 'Contact' }}</a></li>
+          <li><a routerLink="/gallery">{{ t?.nav?.gallery || 'गैलरी' }}</a></li>
+          <li><a routerLink="/events">{{ t?.nav?.events || 'कार्यक्रम' }}</a></li>
+          <li><a routerLink="/quiz">{{ t?.nav?.quiz || 'प्रश्नोत्तरी' }}</a></li>
+          <li><a routerLink="/about">{{ t?.nav?.about || 'हमारे बारे में' }}</a></li>
+          <li><a routerLink="/contact">{{ t?.nav?.contact || 'संपर्क' }}</a></li>
         </ul>
       </div>
-      
+
     </div>
 
     <!-- Copyright Bar -->
     <div class="footer-bottom">
+      <div class="flag-stripe">
+        <span class="saffron"></span>
+        <span class="white"></span>
+        <span class="green"></span>
+      </div>
       <p>{{ t?.footer?.copyright || '© 2026 Independence Day Celebration. Built with ❤️ by Rishabh Singh.' }}</p>
     </div>
   </div>

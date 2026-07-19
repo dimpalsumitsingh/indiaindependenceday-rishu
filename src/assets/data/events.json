@@ -3,21 +3,21 @@
     "title": "Grand Flag Hoisting",
     "location": "Red Fort, New Delhi",
     "date": "15 August, 7:00 AM",
-    "description": "The Prime Minister of India hoists the National Flag followed by a speech to the nation.",
+    "description": "The Prime Minister of India hoists the National Flag at Red Fort followed by an inspiring speech to the nation. A grand celebration with military parade and cultural performances.",
     "image": "assets/images/red_fort.png"
   },
   {
     "title": "Patriotic Cultural Program",
-    "location": "India Gate Lawns",
+    "location": "India Gate Lawns, New Delhi",
     "date": "15 August, 10:00 AM",
-    "description": "Performances by artists from all over India showcasing the rich cultural diversity of the nation.",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da"
+    "description": "Performances by artists from all states of India showcasing the rich cultural diversity and unity of our great nation. Music, dance, and art come together in a vibrant celebration.",
+    "image": "assets/images/independence_day_1947.png"
   },
   {
-    "title": "Freedom Marathon",
-    "location": "Marine Drive, Mumbai",
+    "title": "Freedom March",
+    "location": "Rajpath, New Delhi",
     "date": "15 August, 6:00 AM",
-    "description": "A 10km marathon dedicated to the spirit of freedom and unity.",
-    "image": "https://images.unsplash.com/photo-1532375810709-75b1da00537c"
+    "description": "A commemorative march retracing the steps of our freedom fighters, celebrating the spirit of independence, unity and patriotism across the capital.",
+    "image": "assets/images/salt_march.png"
   }
 ]

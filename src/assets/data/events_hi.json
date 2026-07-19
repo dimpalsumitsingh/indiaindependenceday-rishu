@@ -11,13 +11,13 @@
     "location": "इंडिया गेट मैदान",
     "date": "15 अगस्त, सुबह 10:00 बजे",
     "description": "पूरे भारत के कलाकारों द्वारा प्रदर्शन जो राष्ट्र की समृद्ध सांस्कृतिक विविधता को प्रदर्शित करते हैं।",
-    "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da"
+    "image": "assets/images/independence_day_1947.png"
   },
   {
     "title": "स्वतंत्रता मैराथन",
     "location": "मरीन ड्राइव, मुंबई",
     "date": "15 अगस्त, सुबह 6:00 बजे",
     "description": "स्वतंत्रता और एकता की भावना को समर्पित 10 किमी मैराथन।",
-    "image": "https://images.unsplash.com/photo-1532375810709-75b1da00537c"
+    "image": "assets/images/salt_march.png"
   }
 ]

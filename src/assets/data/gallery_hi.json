@@ -1,15 +1,5 @@
 [
   {
-    "url": "https://images.unsplash.com/photo-1532375810709-75b1da00537c",
-    "title": "भारतीय ध्वज",
-    "category": "प्रतीक"
-  },
-  {
-    "url": "https://images.unsplash.com/photo-1587474260584-136574528ed5",
-    "title": "इंडिया गेट",
-    "category": "स्मारक"
-  },
-  {
     "url": "assets/images/red_fort.png",
     "title": "लाल किला",
     "category": "स्मारक"
@@ -20,13 +10,38 @@
     "category": "विरासत"
   },
   {
-    "url": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da",
-    "title": "संस्कृति",
-    "category": "संस्कृति"
+    "url": "assets/images/independence_day_1947.png",
+    "title": "स्वतंत्रता दिवस 1947",
+    "category": "इतिहास"
+  },
+  {
+    "url": "assets/images/salt_march.png",
+    "title": "नमक मार्च",
+    "category": "इतिहास"
+  },
+  {
+    "url": "assets/images/quit_india.png",
+    "title": "भारत छोड़ो आंदोलन",
+    "category": "इतिहास"
   },
   {
     "url": "assets/images/india.png",
     "title": "भारत की भावना",
     "category": "संस्कृति"
+  },
+  {
+    "url": "assets/images/jallianwala_bagh.png",
+    "title": "जलियाँवाला बाग़",
+    "category": "इतिहास"
+  },
+  {
+    "url": "assets/images/non_cooperation.png",
+    "title": "असहयोग आंदोलन",
+    "category": "इतिहास"
+  },
+  {
+    "url": "assets/images/national_flag.png",
+    "title": "तिरंगा — राष्ट्रीय ध्वज",
+    "category": "प्रतीक"
   }
 ]

@@ -1,7 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AudioService } from '../../core/services/audio.service';
+import { LanguageService } from '../../core/services/language.service';
+import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -9,11 +11,21 @@ import { AudioService } from '../../core/services/audio.service';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   isScrolled = false;
   isMenuOpen = false;
+  t: any = {};
+  private langSub!: Subscription;
 
-  constructor(public audioService: AudioService) { }
+  constructor(public langService: LanguageService) {}
+
+  ngOnInit(): void {
+    this.langSub = this.langService.translations$.subscribe(t => this.t = t);
+  }
+
+  ngOnDestroy(): void {
+    if (this.langSub) this.langSub.unsubscribe();
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -26,16 +38,10 @@ export class NavbarComponent {
 
   onNavClick() {
     this.isMenuOpen = false;
-    this.audioService.playClickSound();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  toggleMusic() {
-    this.audioService.toggleAudio();
-  }
-
-  onVolumeChange(event: Event) {
-    const input = event.target as HTMLInputElement;
-    this.audioService.setVolume(parseFloat(input.value));
+  toggleLang() {
+    this.langService.toggleLanguage();
   }
 }
