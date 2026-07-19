@@ -1,7 +1,7 @@
 <div class="page-container fade-in">
   <div class="page-header text-center">
-    <h1 class="heading-primary text-gradient">Upcoming Events</h1>
-    <p class="subtitle">Join the celebrations across the country</p>
+    <h1 class="heading-primary text-gradient">{{ t?.events?.pageTitle || 'Upcoming Events' }}</h1>
+    <p class="subtitle">{{ t?.events?.pageSubtitle || 'Join the celebrations across the country' }}</p>
   </div>
 
   <div class="events-container container">
@@ -16,7 +16,7 @@
           <span><i class="fa-regular fa-calendar"></i> {{ event.date }}</span>
         </div>
         <p>{{ event.description }}</p>
-        <button class="btn btn-primary">RSVP Now</button>
+        <button class="btn btn-primary">{{ t?.events?.rsvp || 'RSVP Now' }}</button>
       </div>
     </div>
   </div>

@@ -1,8 +1,7 @@
 <div class="page-container fade-in">
-  <div class="page-header">
-    <h1 class="heading-primary text-gradient text-center">Historical Timeline</h1>
-    <p class="text-center subtitle">A journey through India's struggle for freedom</p>
+  <div class="page-header text-center">
+    <h1 class="heading-primary text-gradient">{{ t?.timelinePage?.pageTitle || 'Historical Timeline' }}</h1>
+    <p class="subtitle">{{ t?.timelinePage?.pageSubtitle || 'A journey through India\'s struggle for freedom' }}</p>
   </div>
-  
   <app-timeline></app-timeline>
 </div>

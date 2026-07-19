@@ -1,6 +1,29 @@
-<ngx-particles [id]="id" [options]="particlesOptions"></ngx-particles>
 <app-navbar></app-navbar>
-<main class="main-content" style="position: relative; z-index: 1;">
+<main class="main-content">
   <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>
+
+<!-- Floating Audio Control -->
+<div class="audio-control glass-card" [class.playing]="audioService.isPlaying$ | async">
+  <button class="play-btn" (click)="audioService.toggleAudio()" [attr.aria-label]="(audioService.isPlaying$ | async) ? 'Pause Music' : 'Play Music'">
+    <i class="fa-solid" [ngClass]="(audioService.isPlaying$ | async) ? 'fa-pause' : 'fa-music'"></i>
+  </button>
+  <div class="audio-info" *ngIf="audioService.isPlaying$ | async">
+    <span class="song-title">Vande Mataram</span>
+    <div class="equalizer">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="audio-info" *ngIf="!(audioService.isPlaying$ | async)">
+    <span class="song-title">{{ t?.audioBar?.playMusic || 'Play Music' }}</span>
+  </div>
+  
+  <div class="volume-control">
+    <i class="fa-solid" [ngClass]="(audioService.isMuted$ | async) ? 'fa-volume-xmark' : (((audioService.volume$ | async) || 0) < 0.5 ? 'fa-volume-low' : 'fa-volume-high')"></i>
+    <input type="range" min="0" max="1" step="0.01" 
+           [value]="audioService.volume$ | async" 
+           (input)="audioService.setVolume($any($event.target).value)"
+           class="volume-slider">
+  </div>
+</div>

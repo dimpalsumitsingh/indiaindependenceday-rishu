@@ -1,17 +1,17 @@
 <div class="page-container fade-in">
   <div class="page-header text-center">
-    <h1 class="heading-primary text-gradient">Test Your Knowledge</h1>
-    <p class="subtitle">How well do you know India's history?</p>
+    <h1 class="heading-primary text-gradient">{{ t?.quiz?.pageTitle || 'Test Your Knowledge' }}</h1>
+    <p class="subtitle">{{ t?.quiz?.pageSubtitle || 'How well do you know India\'s history?' }}</p>
   </div>
 
   <div class="poem-section text-center" style="margin-bottom: 2rem;">
-    <h3 class="text-gradient">🇮🇳 Short Poem on India</h3>
+    <h3 class="text-gradient">{{ t?.quiz?.poemTitle || '🇮🇳 Short Poem on India' }}</h3>
     <p class="poem-text" style="font-size: 1.1rem; line-height: 1.6;">
-      <strong>My India, proud and free,</strong><br>
-      <strong>A land of hope for you and me.</strong><br>
-      <strong>With courage, peace, and unity,</strong><br>
-      <strong>We salute our nation's dignity.</strong><br>
-      <strong>Happy Independence Day! 🇮🇳</strong>
+      <strong>{{ t?.quiz?.poemL1 || 'My India, proud and free,' }}</strong><br>
+      <strong>{{ t?.quiz?.poemL2 || 'A land of hope for you and me.' }}</strong><br>
+      <strong>{{ t?.quiz?.poemL3 || 'With courage, peace, and unity,' }}</strong><br>
+      <strong>{{ t?.quiz?.poemL4 || 'We salute our nation\'s dignity.' }}</strong><br>
+      <strong>{{ t?.quiz?.poemL5 || 'Happy Independence Day! 🇮🇳' }}</strong>
     </p>
   </div>
 
@@ -19,8 +19,8 @@
     <div class="glass-card quiz-card">
       <div *ngIf="!showScore">
         <div class="quiz-header">
-          <span>Question {{ currentQuestion + 1 }} / {{ questions.length }}</span>
-          <span>Score: {{ score }}</span>
+          <span>{{ t?.quiz?.question || 'Question' }} {{ currentQuestion + 1 }} / {{ questions.length }}</span>
+          <span>{{ t?.quiz?.score || 'Score' }}: {{ score }}</span>
         </div>
         
         <h2 class="question-text">{{ questions[currentQuestion].question }}</h2>
@@ -41,27 +41,27 @@
         
         <div class="quiz-footer" *ngIf="isAnswered">
           <button class="btn btn-primary" (click)="nextQuestion()">
-            {{ currentQuestion === questions.length - 1 ? 'Finish' : 'Next' }}
+            {{ currentQuestion === questions.length - 1 ? (t?.quiz?.finish || 'Finish') : (t?.quiz?.next || 'Next') }}
           </button>
         </div>
       </div>
       
       <div *ngIf="showScore" class="score-section text-center">
-        <h2>Quiz Completed!</h2>
+        <h2>{{ t?.quiz?.quizCompleted || 'Quiz Completed!' }}</h2>
         <div class="score-circle">
           <span>{{ score }}</span> / {{ questions.length }}
         </div>
-        <p *ngIf="score === questions.length">Perfect Score! You are a true patriot!</p>
-        <p *ngIf="score < questions.length && score > 2">Good job! Keep learning.</p>
-        <p *ngIf="score <= 2">Time to brush up on some history!</p>
+        <p *ngIf="score === questions.length">{{ t?.quiz?.perfectScore || 'Perfect Score! You are a true patriot!' }}</p>
+        <p *ngIf="score < questions.length && score > 2">{{ t?.quiz?.goodJob || 'Good job! Keep learning.' }}</p>
+        <p *ngIf="score <= 2">{{ t?.quiz?.brushUp || 'Time to brush up on some history!' }}</p>
 
         <div class="bonus-question mt-4 p-4" style="background: rgba(255, 255, 255, 0.05); border-radius: 10px; text-align: left; margin-top: 2rem; border-left: 4px solid var(--saffron);">
-          <h3 class="text-gradient" style="margin-bottom: 1rem;">🇮🇳 Bonus Question</h3>
-          <p style="margin-bottom: 0.5rem; font-size: 1.1rem;"><strong>What does Independence Day remind us of?</strong></p>
-          <p style="opacity: 0.9;"><strong>Answer:</strong> It reminds us of the sacrifices made by our freedom fighters and inspires us to uphold the values of freedom, unity, peace, and democracy. 🇮🇳</p>
+          <h3 class="text-gradient" style="margin-bottom: 1rem;">{{ t?.quiz?.bonusTitle || '🇮🇳 Bonus Question' }}</h3>
+          <p style="margin-bottom: 0.5rem; font-size: 1.1rem;"><strong>{{ t?.quiz?.bonusQuestion || 'What does Independence Day remind us of?' }}</strong></p>
+          <p style="opacity: 0.9;"><strong>{{ langService.currentLang === 'hi' ? 'उत्तर:' : 'Answer:' }}</strong> {{ t?.quiz?.bonusAnswer || 'It reminds us of the sacrifices made by our freedom fighters.' }}</p>
         </div>
 
-        <button class="btn btn-primary mt-4" (click)="restartQuiz()">Try Again</button>
+        <button class="btn btn-primary mt-4" (click)="restartQuiz()">{{ t?.quiz?.tryAgain || 'Try Again' }}</button>
       </div>
     </div>
   </div>

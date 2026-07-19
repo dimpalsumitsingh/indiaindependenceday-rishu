@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { LanguageService } from '../../core/services/language.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-hero',
@@ -9,4 +11,15 @@ import { RouterModule } from '@angular/router';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
-export class HeroComponent {}
+export class HeroComponent implements OnDestroy {
+  t: any = {};
+  private sub: Subscription;
+
+  constructor(public langService: LanguageService) {
+    this.sub = this.langService.translations$.subscribe(t => this.t = t);
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
+}

@@ -1,7 +1,7 @@
 <div class="page-container fade-in">
   <div class="page-header text-center">
-    <h1 class="heading-primary text-gradient">Inspirational Stories</h1>
-    <p class="subtitle">Tales of courage and sacrifice from the freedom struggle</p>
+    <h1 class="heading-primary text-gradient">{{ t?.stories?.pageTitle || 'Inspirational Stories' }}</h1>
+    <p class="subtitle">{{ t?.stories?.pageSubtitle || 'Tales of courage and sacrifice from the freedom struggle' }}</p>
   </div>
 
   <div class="stories-container container">
@@ -13,7 +13,7 @@
         <h2>{{ story.title }}</h2>
         <p class="summary">{{ story.summary }}</p>
         <div class="timeline-events">
-          <h4>Key Events:</h4>
+          <h4>{{ t?.stories?.keyEvents || 'Key Events:' }}</h4>
           <ul>
             <li *ngFor="let event of story.events">{{ event }}</li>
           </ul>

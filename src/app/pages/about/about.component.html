@@ -1,34 +1,48 @@
 <div class="page-container fade-in">
   <div class="page-header text-center">
-    <h1 class="heading-primary">About Rishabh Singh</h1>
-    <p class="subtitle">A young learner with a passion for knowledge, creativity, and positive growth.</p>
+    <h1 class="heading-primary text-gradient">{{ t?.about?.pageTitle || 'About Rishabh Singh' }}</h1>
+    <p class="subtitle">{{ t?.about?.pageSubtitle || 'A young learner with a passion for knowledge, creativity, and positive growth.' }}</p>
   </div>
 
-  <div class="about-grid container glass-card">
-    <div class="about-image">
-      <img src="./assets/images/Rishu.jpeg" alt="Rishabh Singh" />
-    </div>
-
-    <div class="about-details">
-      <div class="about-section">
-        <h2>Who is Rishabh?</h2>
-        <p>Rishabh Singh is a student of Class 5 at Pawar Public School. He is an enthusiastic learner with a keen interest in academics, sports, and extracurricular activities.</p>
-        <p>He is known for his positive attitude, curiosity, and willingness to learn new things.</p>
+  <div class="container about-container">
+    <div class="about-grid">
+      <!-- Profile Image Card -->
+      <div class="glass-card profile-card">
+        <div class="profile-img-wrapper">
+          <img src="assets/images/Rishu.jpeg" alt="Rishabh Singh" class="profile-img">
+        </div>
+        <h2 class="profile-name">Rishabh Singh</h2>
+        <p class="profile-role">Student, Class 5</p>
+        
+        <div class="social-links">
+          <a href="#" class="icon-btn" aria-label="School Website"><i class="fa-solid fa-school"></i></a>
+          <a href="#" class="icon-btn" aria-label="Projects"><i class="fa-solid fa-flask"></i></a>
+          <a href="#" class="icon-btn" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a>
+        </div>
       </div>
 
-      <div class="about-section">
-        <h2>School &amp; Interests</h2>
-        <ul>
-          <li><strong>School:</strong> Pawar Public School</li>
-          <li><strong>Class:</strong> Grade 5</li>
-          <li><strong>Interests:</strong> Reading, Science, Sports, Art, and Technology</li>
-        </ul>
-      </div>
+      <!-- About Content -->
+      <div class="about-details">
+        <div class="glass-card detail-card">
+          <h3><i class="fa-solid fa-user-graduate text-gradient"></i> {{ t?.about?.whoTitle || 'Who is Rishabh?' }}</h3>
+          <p>{{ t?.about?.whoP1 || 'Rishabh Singh is a student of Class 5 at Pawar Public School. He is an enthusiastic learner with a keen interest in academics, sports, and extracurricular activities.' }}</p>
+          <p>{{ t?.about?.whoP2 || 'He is known for his positive attitude, curiosity, and willingness to learn new things.' }}</p>
+        </div>
 
-      <div class="about-section">
-        <h2>Character &amp; Goals</h2>
-        <p>Through his participation in classroom activities and school programs, Rishabh continues to build confidence, discipline, and leadership qualities.</p>
-        <p>He aims to continue learning, growing, and contributing positively to his school community.</p>
+        <div class="glass-card detail-card">
+          <h3><i class="fa-solid fa-book-open text-gradient"></i> {{ t?.about?.schoolTitle || 'School & Interests' }}</h3>
+          <ul class="interest-list">
+            <li><strong>{{ langService.currentLang === 'hi' ? 'स्कूल:' : 'School:' }}</strong> {{ t?.about?.school || 'Pawar Public School' }}</li>
+            <li><strong>{{ langService.currentLang === 'hi' ? 'कक्षा:' : 'Class:' }}</strong> {{ t?.about?.class || 'Grade 5' }}</li>
+            <li><strong>{{ langService.currentLang === 'hi' ? 'रुचियाँ:' : 'Interests:' }}</strong> {{ t?.about?.interests || 'Reading, Science, Sports, Art, and Technology' }}</li>
+          </ul>
+        </div>
+
+        <div class="glass-card detail-card">
+          <h3><i class="fa-solid fa-star text-gradient"></i> {{ t?.about?.characterTitle || 'Character & Goals' }}</h3>
+          <p>{{ t?.about?.characterP1 || 'Through his participation in classroom activities and school programs, Rishabh continues to build confidence, discipline, and leadership qualities.' }}</p>
+          <p>{{ t?.about?.characterP2 || 'He aims to continue learning, growing, and contributing positively to his school community.' }}</p>
+        </div>
       </div>
     </div>
   </div>

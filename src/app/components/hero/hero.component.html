@@ -10,12 +10,12 @@
       <div class="chakra-wrapper">
         <i class="fa-solid fa-dharmachakra chakra-spin"></i>
       </div>
-      <h1 class="main-title text-gradient">Happy Independence Day</h1>
-      <p class="subtitle">Celebrating Freedom, Unity and Pride</p>
+      <h1 class="main-title text-gradient">{{ t?.hero?.title || 'Happy Independence Day' }}</h1>
+      <p class="subtitle">{{ t?.hero?.subtitle || 'Celebrating Freedom, Unity and Pride' }}</p>
       
       <div class="cta-group">
-        <a routerLink="/history" class="btn btn-primary">Explore History</a>
-        <a routerLink="/freedom-fighters" class="btn btn-secondary">Freedom Fighters</a>
+        <a routerLink="/history" class="btn btn-primary">{{ t?.hero?.exploreHistory || 'Explore History' }}</a>
+        <a routerLink="/freedom-fighters" class="btn btn-secondary">{{ t?.hero?.freedomFighters || 'Freedom Fighters' }}</a>
       </div>
     </div>
   </div>

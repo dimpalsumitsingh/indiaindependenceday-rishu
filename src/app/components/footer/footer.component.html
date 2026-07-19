@@ -1,40 +1,48 @@
 <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-section brand">
-      <h3 class="text-gradient"><i class="fa-solid fa-dharmachakra"></i> Independence Day</h3>
-      <p>Celebrating the spirit of freedom, unity, and pride of India. A tribute to the heroes of our nation.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+  <div class="footer-container">
+    <div class="footer-grid">
+      
+      <!-- Brand Section -->
+      <div class="footer-brand">
+        <a routerLink="/" class="logo text-gradient heading-primary">
+          <i class="fa-solid fa-dharmachakra fa-spin" style="--fa-animation-duration: 15s;"></i> 
+          {{ langService.currentLang === 'hi' ? 'स्वतंत्रता दिवस' : 'Independence Day' }}
+        </a>
+        <p class="brand-desc">
+          {{ t?.footer?.brandDesc || 'Celebrating the spirit of freedom, unity, and pride of India. A tribute to the heroes of our nation.' }}
+        </p>
       </div>
+
+      <!-- Quick Links (6 links) -->
+      <div class="footer-links">
+        <h3 class="heading-primary">{{ t?.footer?.quickLinks || 'Quick Links' }}</h3>
+        <ul>
+          <li><a routerLink="/" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.home || 'Home' }}</a></li>
+          <li><a routerLink="/history" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.history || 'History' }}</a></li>
+          <li><a routerLink="/timeline" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.timeline || 'Timeline' }}</a></li>
+          <li><a routerLink="/freedom-fighters" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.freedomFighters || 'Freedom Fighters' }}</a></li>
+          <li><a routerLink="/national-symbols" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.nationalSymbols || 'National Symbols' }}</a></li>
+          <li><a routerLink="/stories" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.stories || 'Stories' }}</a></li>
+        </ul>
+      </div>
+
+      <!-- More Links (5 links) -->
+      <div class="footer-links">
+        <h3 class="heading-primary">{{ t?.footer?.more || 'More' }}</h3>
+        <ul>
+          <li><a routerLink="/gallery" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.gallery || 'Gallery' }}</a></li>
+          <li><a routerLink="/events" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.events || 'Events' }}</a></li>
+          <li><a routerLink="/quiz" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.quiz || 'Quiz' }}</a></li>
+          <li><a routerLink="/about" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.about || 'About' }}</a></li>
+          <li><a routerLink="/contact" (mouseenter)="audioService.playHoverSound()">{{ t?.nav?.contact || 'Contact' }}</a></li>
+        </ul>
+      </div>
+      
     </div>
 
-    <div class="footer-section links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/history">History</a></li>
-        <li><a routerLink="/timeline">Timeline</a></li>
-        <li><a routerLink="/freedom-fighters">Freedom Fighters</a></li>
-        <li><a routerLink="/gallery">Gallery</a></li>
-      </ul>
+    <!-- Copyright Bar -->
+    <div class="footer-bottom">
+      <p>{{ t?.footer?.copyright || '© 2026 Independence Day Celebration. Built with ❤️ by Rishabh Singh.' }}</p>
     </div>
-
-    <div class="footer-section links">
-      <h4>More</h4>
-      <ul>
-        <li><a routerLink="/events">Events</a></li>
-        <li><a routerLink="/quiz">Take a Quiz</a></li>
-        <li><a routerLink="/contact">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2026 Independence Day Celebration. Built with <i class="fa-solid fa-heart" style="color: #FF9933"></i> by
-      Rishabh Singh.</p>
   </div>
 </footer>

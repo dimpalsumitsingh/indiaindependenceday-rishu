@@ -8,13 +8,13 @@ import { BehaviorSubject } from 'rxjs';
 export class AudioService {
   private audio = new Audio();
   private audioCtx?: AudioContext;
-  
+
   private isPlayingSubject = new BehaviorSubject<boolean>(false);
   isPlaying$ = this.isPlayingSubject.asObservable();
-  
+
   private volumeSubject = new BehaviorSubject<number>(0.5);
   volume$ = this.volumeSubject.asObservable();
-  
+
   private isMutedSubject = new BehaviorSubject<boolean>(false);
   isMuted$ = this.isMutedSubject.asObservable();
 
@@ -29,7 +29,7 @@ export class AudioService {
         this.audioCtx = new AudioContextClass();
       }
 
-      this.audio.src = 'assets/audio/ae_watan.mp4';
+      this.audio.src = 'assets/audio/vande_matram.mp3';
       this.audio.loop = true;
 
       // Load preferences
@@ -46,7 +46,7 @@ export class AudioService {
 
       this.audio.volume = this.volumeSubject.value;
       this.audio.muted = this.isMutedSubject.value;
-      
+
       // Try autoplaying on load if it was playing before and not muted
       if (savedPlaying !== 'false' && !this.audio.muted) {
         this.audio.play().then(() => {
@@ -76,7 +76,7 @@ export class AudioService {
 
   playAudio() {
     if (!this.isBrowser) return;
-    
+
     if (this.audioCtx && this.audioCtx.state === 'suspended') {
       this.audioCtx.resume();
     }
@@ -102,7 +102,7 @@ export class AudioService {
     this.audio.muted = newMutedState;
     this.isMutedSubject.next(newMutedState);
     localStorage.setItem('audioMuted', newMutedState.toString());
-    
+
     if (newMutedState) {
       this.audio.pause();
       this.isPlayingSubject.next(false);
@@ -114,20 +114,20 @@ export class AudioService {
   playClickSound() {
     if (!this.isBrowser || !this.audioCtx || this.isMutedSubject.value) return;
     if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
-    
+
     const osc = this.audioCtx.createOscillator();
     const gainNode = this.audioCtx.createGain();
-    
+
     osc.type = 'sine';
     osc.frequency.setValueAtTime(600, this.audioCtx.currentTime);
     osc.frequency.exponentialRampToValueAtTime(300, this.audioCtx.currentTime + 0.1);
-    
+
     gainNode.gain.setValueAtTime(this.volumeSubject.value * 0.3, this.audioCtx.currentTime);
     gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioCtx.currentTime + 0.1);
-    
+
     osc.connect(gainNode);
     gainNode.connect(this.audioCtx.destination);
-    
+
     osc.start();
     osc.stop(this.audioCtx.currentTime + 0.1);
   }
@@ -135,20 +135,20 @@ export class AudioService {
   playHoverSound() {
     if (!this.isBrowser || !this.audioCtx || this.isMutedSubject.value) return;
     if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
-    
+
     const osc = this.audioCtx.createOscillator();
     const gainNode = this.audioCtx.createGain();
-    
+
     osc.type = 'sine';
     osc.frequency.setValueAtTime(400, this.audioCtx.currentTime);
     osc.frequency.exponentialRampToValueAtTime(600, this.audioCtx.currentTime + 0.05);
-    
+
     gainNode.gain.setValueAtTime(this.volumeSubject.value * 0.1, this.audioCtx.currentTime);
     gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioCtx.currentTime + 0.05);
-    
+
     osc.connect(gainNode);
     gainNode.connect(this.audioCtx.destination);
-    
+
     osc.start();
     osc.stop(this.audioCtx.currentTime + 0.05);
   }

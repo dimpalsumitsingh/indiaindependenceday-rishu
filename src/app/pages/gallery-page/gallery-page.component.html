@@ -1,8 +1,7 @@
 <div class="page-container fade-in">
   <div class="page-header text-center">
-    <h1 class="heading-primary text-gradient">Gallery</h1>
-    <p class="subtitle">Glimpses of our vibrant nation</p>
+    <h1 class="heading-primary text-gradient">{{ t?.gallery?.pageTitle || 'Gallery' }}</h1>
+    <p class="subtitle">{{ t?.gallery?.pageSubtitle || 'Glimpses of our vibrant nation' }}</p>
   </div>
-
   <app-gallery></app-gallery>
 </div>

@@ -1,20 +1,31 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgxParticlesModule, NgParticlesService } from '@tsparticles/angular';
 import { Engine } from '@tsparticles/engine';
 import { loadFull } from 'tsparticles';
 import { AudioService } from './core/services/audio.service';
+import { LanguageService } from './core/services/language.service';
+import { CommonModule } from '@angular/common';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, NgxParticlesModule],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent, NgxParticlesModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
+  title = 'independence-day-app';
+  t: any = {};
+  private sub!: Subscription;
+  private routerSub!: Subscription;
+  private hasInteracted = false;
+  private lastHoveredElement: Element | null = null;
+
   id = 'tsparticles';
   particlesOptions = {
     background: {
@@ -25,70 +36,53 @@ export class AppComponent implements OnInit {
     fpsLimit: 60,
     interactivity: {
       events: {
-        onClick: {
-          enable: true,
-          mode: 'push',
-        },
-        onHover: {
-          enable: true,
-          mode: 'repulse',
-        },
-        resize: {
-          enable: true,
-        },
+        onClick: { enable: true, mode: 'push' },
+        onHover: { enable: true, mode: 'repulse' },
+        resize: { enable: true, } as any,
       },
       modes: {
-        push: {
-          quantity: 4,
-        },
-        repulse: {
-          distance: 100,
-          duration: 0.4,
-        },
+        push: { quantity: 4 },
+        repulse: { distance: 100, duration: 0.4 },
       },
     },
     particles: {
-      color: {
-        value: ['#FF9933', '#FFFFFF', '#138808'],
-      },
-      links: {
-        enable: false,
-      },
+      color: { value: ['#FF9933', '#FFFFFF', '#138808'] },
+      links: { enable: false },
       move: {
         direction: 'bottom' as const,
         enable: true,
-        outModes: {
-          default: 'out' as const,
-        },
+        outModes: { default: 'out' as const },
         random: false,
         speed: 2,
         straight: false,
       },
-      number: {
-        density: {
-          enable: true,
-        },
-        value: 50,
-      },
-      opacity: {
-        value: 0.8,
-      },
-      shape: {
-        type: ['circle', 'star'],
-      },
-      size: {
-        value: { min: 2, max: 5 },
-      },
+      number: { density: { enable: true }, value: 50 },
+      opacity: { value: 0.8 },
+      shape: { type: ['circle', 'star'] },
+      size: { value: { min: 2, max: 5 } },
     },
     detectRetina: true,
   };
 
-  private hasInteracted = false;
-
   constructor(
     private readonly ngParticlesService: NgParticlesService,
-    private readonly audioService: AudioService
-  ) {}
+    public readonly audioService: AudioService,
+    public langService: LanguageService,
+    private router: Router
+  ) {
+    this.sub = this.langService.translations$.subscribe(t => this.t = t);
+    
+    // Scroll to top on every route change
+    this.routerSub = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }, 0);
+    });
+  }
 
   ngOnInit(): void {
     void this.ngParticlesService.init(async (engine: Engine) => {
@@ -96,13 +90,16 @@ export class AppComponent implements OnInit {
     });
   }
 
-  private lastHoveredElement: Element | null = null;
+  ngOnDestroy(): void {
+    if (this.sub) this.sub.unsubscribe();
+    if (this.routerSub) this.routerSub.unsubscribe();
+  }
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
     if (!this.hasInteracted) {
       this.hasInteracted = true;
-      this.audioService.playAudio();
+      this.audioService.playClickSound(); // Initialize audio context
     }
     
     if (this.isInteractive(event.target as HTMLElement)) {

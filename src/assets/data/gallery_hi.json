@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://images.unsplash.com/photo-1532375810709-75b1da00537c",
+    "title": "भारतीय ध्वज",
+    "category": "प्रतीक"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1587474260584-136574528ed5",
+    "title": "इंडिया गेट",
+    "category": "स्मारक"
+  },
+  {
+    "url": "assets/images/red_fort.png",
+    "title": "लाल किला",
+    "category": "स्मारक"
+  },
+  {
+    "url": "assets/images/taj_mahal.png",
+    "title": "ताज महल",
+    "category": "विरासत"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da",
+    "title": "संस्कृति",
+    "category": "संस्कृति"
+  },
+  {
+    "url": "assets/images/india.png",
+    "title": "भारत की भावना",
+    "category": "संस्कृति"
+  }
+]
