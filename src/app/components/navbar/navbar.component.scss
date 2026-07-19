@@ -182,7 +182,8 @@
     .menu-toggle { display: block; }
 
     .logo .logo-text {
-      display: none; // show only icon on small screens
+      display: inline-block;
+      font-size: 1.1rem;
     }
 
     .nav-links {
@@ -237,5 +238,13 @@
   @media (max-width: 480px) {
     .lang-toggle .lang-label { display: none; }
     .lang-toggle { padding: 6px 10px; }
+    
+    .logo .logo-text {
+      display: inline-block;
+      font-size: 0.9rem;
+      white-space: normal;
+      max-width: 120px;
+      line-height: 1.1;
+    }
   }
 }
