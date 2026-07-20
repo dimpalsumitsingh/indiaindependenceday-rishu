@@ -11,8 +11,8 @@
         <div class="profile-img-wrapper">
           <img src="assets/images/Rishu.jpeg" alt="Rishabh Singh" class="profile-img">
         </div>
-        <h2 class="profile-name">Rishabh Singh</h2>
-        <p class="profile-role">Student, Class 5</p>
+        <h2 class="profile-name">{{ langService.currentLang === 'hi' ? 'ऋषभ सिंह' : 'Rishabh Singh' }}</h2>
+        <p class="profile-role">{{ langService.currentLang === 'hi' ? 'छात्र, कक्षा 5' : 'Student, Class 5' }}</p>
         
         <div class="social-links">
           <a href="#" class="icon-btn" aria-label="School Website"><i class="fa-solid fa-school"></i></a>

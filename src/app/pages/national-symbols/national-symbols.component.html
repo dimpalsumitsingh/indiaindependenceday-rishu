@@ -11,13 +11,13 @@
       <div class="glass-card symbol-card">
         <div class="symbol-header">
           <i class="fa-solid fa-music text-gradient icon-large"></i>
-          <h2>National Anthem</h2>
-          <p class="symbol-meta">Composed by Rabindranath Tagore</p>
+          <h2>{{ t?.nationalSymbols?.anthemTitle || 'National Anthem' }}</h2>
+          <p class="symbol-meta">{{ t?.nationalSymbols?.anthemComposer || 'Composed by Rabindranath Tagore' }}</p>
         </div>
         
         <div class="anthem-content">
           <div class="lyrics-card">
-            <h3>Jana Gana Mana (Hindi)</h3>
+            <h3>{{ t?.nationalSymbols?.anthemLyricsTitle || 'Jana Gana Mana (Hindi)' }}</h3>
             <p class="hindi-text">
               जन-गण-मन अधिनायक जय हे,<br>
               भारत-भाग्य-विधाता।<br>
@@ -36,9 +36,9 @@
           </div>
           
           <div class="info-section">
-            <h4>About the National Anthem</h4>
-            <p>The National Anthem of India "Jana Gana Mana", composed originally in Bengali by Rabindranath Tagore, was adopted in its Hindi version by the Constituent Assembly as the National Anthem of India on 24 January 1950. It was first sung on 27 December 1911 at the Calcutta Session of the Indian National Congress.</p>
-            <p class="playing-time"><i class="fa-solid fa-clock"></i> Playing time: Approximately 52 seconds.</p>
+            <h4>{{ t?.nationalSymbols?.anthemAboutTitle || 'About the National Anthem' }}</h4>
+            <p>{{ t?.nationalSymbols?.anthemAboutText || 'The National Anthem of India "Jana Gana Mana", composed originally in Bengali by Rabindranath Tagore, was adopted in its Hindi version by the Constituent Assembly as the National Anthem of India on 24 January 1950. It was first sung on 27 December 1911 at the Calcutta Session of the Indian National Congress.' }}</p>
+            <p class="playing-time"><i class="fa-solid fa-clock"></i> {{ t?.nationalSymbols?.anthemPlayingTime || 'Playing time: Approximately 52 seconds.' }}</p>
           </div>
         </div>
       </div>
@@ -47,8 +47,8 @@
       <div class="glass-card symbol-card">
         <div class="symbol-header">
           <i class="fa-solid fa-om text-gradient icon-large"></i>
-          <h2>National Song</h2>
-          <p class="symbol-meta">Composed by Bankim Chandra Chatterjee</p>
+          <h2>{{ t?.nationalSymbols?.songTitle || 'National Song' }}</h2>
+          <p class="symbol-meta">{{ t?.nationalSymbols?.songComposer || 'Composed by Bankim Chandra Chatterjee' }}</p>
         </div>
         
         <div class="anthem-content">
@@ -95,8 +95,8 @@
           </div>
           
           <div class="info-section">
-            <h4>About the National Song</h4>
-            <p>The song "Vande Mataram", composed in Sanskrit by Bankim Chandra Chatterjee, was a source of inspiration to the people in their struggle for freedom. It has an equal status with Jana Gana Mana. The first political occasion when it was sung was the 1896 session of the Indian National Congress.</p>
+            <h4>{{ t?.nationalSymbols?.songAboutTitle || 'About the National Song' }}</h4>
+            <p>{{ t?.nationalSymbols?.songAboutText1 || 'The song "Vande Mataram", composed in Sanskrit by Bankim Chandra Chatterjee, was a source of inspiration to the people in their struggle for freedom. It has an equal status with Jana Gana Mana. The first political occasion when it was sung was the 1896 session of the Indian National Congress.' }}</p>
           </div>
         </div>
       </div>
